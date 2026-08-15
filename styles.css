@@ -809,6 +809,202 @@ footer nav a:hover { color: var(--sky); border-bottom-color: currentColor; }
   .footer-inner { padding-bottom: 5.5rem; }
 }
 
+/* ── Живая глубина и пространственное движение ────────────────────────── */
+
+/* Тонкий индикатор показывает движение от поверхности к ядру. */
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--sky), var(--blue), var(--core));
+  transform: scaleX(var(--scroll-progress, 0));
+  transform-origin: left center;
+  will-change: transform;
+}
+
+/* Портрет становится окном в слои: небольшая перспектива вместо наклона
+   всей секции сохраняет спокойную типографику и читаемость. */
+.portrait {
+  --pointer-x: 0;
+  --pointer-y: 0;
+  --depth-strength: 1;
+  perspective: 1100px;
+  transform-style: preserve-3d;
+}
+.portrait img {
+  transform: rotateY(calc(var(--pointer-x) * 5deg * var(--depth-strength)))
+             rotateX(calc(var(--pointer-y) * -4deg * var(--depth-strength)))
+             translateZ(12px);
+  transform-origin: center 42%;
+  transition: transform .5s cubic-bezier(.22, .61, .36, 1), filter .4s ease;
+  box-shadow: 0 28px 70px rgba(18, 35, 61, .14);
+}
+.portrait::before,
+.portrait::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(1px);
+}
+.portrait::before {
+  width: 44%;
+  aspect-ratio: 1;
+  top: -7%;
+  right: -10%;
+  border: 1px solid rgba(107, 181, 236, .42);
+  box-shadow: inset 0 0 38px rgba(107, 181, 236, .08);
+  transform: translate3d(calc(var(--pointer-x) * -18px), calc(var(--pointer-y) * -14px), -30px);
+  animation: depth-orbit 9s ease-in-out infinite;
+}
+.portrait::after {
+  width: 17%;
+  aspect-ratio: 1;
+  top: 13%;
+  right: -2%;
+  background: radial-gradient(circle at 32% 28%, #fff 0 8%, #b8ddf8 28%, #6bb5ec 62%, #2e497c 100%);
+  box-shadow: inset -12px -10px 20px rgba(13, 27, 48, .22), 0 18px 35px rgba(46, 73, 124, .2);
+  transform: translate3d(calc(var(--pointer-x) * -32px), calc(var(--pointer-y) * -24px), 36px);
+  animation: depth-float 6s ease-in-out infinite;
+}
+.portrait figcaption {
+  position: relative;
+  z-index: 2;
+  transform: translate3d(calc(var(--pointer-x) * 8px), calc(var(--pointer-y) * 5px), 24px);
+  transition: transform .5s cubic-bezier(.22, .61, .36, 1);
+}
+.portrait-strata {
+  transform: translate3d(calc(var(--pointer-x) * 16px), calc(var(--pointer-y) * 8px), 42px);
+  transition: transform .5s cubic-bezier(.22, .61, .36, 1);
+}
+
+/* Интерактивная модель остаётся плоской схемой по смыслу, но оболочки
+   получают разную высоту в пространстве и сходятся к активному ядру. */
+.model-sticky {
+  --pointer-x: 0;
+  --pointer-y: 0;
+  --depth-strength: .72;
+  perspective: 900px;
+}
+.shells {
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--pointer-x) * 5deg * var(--depth-strength)))
+             rotateX(calc(var(--pointer-y) * -4deg * var(--depth-strength)));
+  transition: transform .55s cubic-bezier(.22, .61, .36, 1);
+  filter: drop-shadow(0 20px 24px rgba(18, 35, 61, .1));
+}
+.shells .shell { transform-box: fill-box; transform-origin: center top; }
+.shells .shell path {
+  transform-box: fill-box;
+  transform-origin: center top;
+  transition: opacity .38s ease, filter .38s ease, transform .38s cubic-bezier(.22, .61, .36, 1);
+}
+.shells[data-active="1"] .shell[data-shell="1"] path,
+.shells[data-active="2"] .shell[data-shell="2"] path,
+.shells[data-active="3"] .shell[data-shell="3"] path,
+.shells[data-active="4"] .shell[data-shell="4"] path {
+  transform: translateY(-4px) scale(1.012);
+  filter: drop-shadow(0 10px 9px rgba(18, 35, 61, .2)) saturate(1.08);
+}
+.shells .surface-line {
+  stroke-dasharray: 9 8;
+  animation: surface-flow 14s linear infinite;
+}
+
+/* Страты слегка «дышат» светом. Декор изолирован от контента. */
+.stratum-core { position: relative; overflow: clip; }
+.stratum-core::before,
+.stratum-core::after {
+  content: "";
+  position: absolute;
+  width: min(42vw, 580px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: .12;
+  filter: blur(90px);
+  background: var(--sky);
+  animation: core-breathe 10s ease-in-out infinite;
+}
+.stratum-core::before { top: 4%; right: -18%; }
+.stratum-core::after { bottom: 3%; left: -22%; animation-delay: -5s; }
+.stratum-core > .wrap { position: relative; z-index: 1; }
+
+.ledger li,
+.register article {
+  transition: transform .35s cubic-bezier(.22, .61, .36, 1),
+              background-color .35s ease, padding-inline .35s ease;
+}
+.ledger li:hover {
+  transform: translateX(8px);
+  background: linear-gradient(90deg, rgba(107, 181, 236, .08), transparent 72%);
+  padding-inline: 1rem;
+}
+.register article:hover {
+  transform: translateX(8px);
+  background: linear-gradient(90deg, rgba(107, 181, 236, .08), transparent 72%);
+  padding-inline: 1rem;
+}
+
+.core-mark {
+  transform-style: preserve-3d;
+  animation: core-mark-float 7s ease-in-out infinite;
+  filter: drop-shadow(0 22px 20px rgba(0, 0, 0, .22));
+}
+.core-mark path { transform-box: fill-box; transform-origin: center top; }
+.core-mark path:nth-of-type(2) { animation: shell-pulse 5s ease-in-out infinite; }
+.core-mark path:nth-of-type(3) { animation: shell-pulse 5s .25s ease-in-out infinite; }
+.core-mark path:nth-of-type(4) { animation: shell-pulse 5s .5s ease-in-out infinite; }
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transform: translate(var(--magnet-x, 0), var(--magnet-y, 0));
+  transition: transform .3s cubic-bezier(.22, .61, .36, 1), background-color .2s, color .2s, border-color .2s;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(110deg, transparent 22%, rgba(255, 255, 255, .34) 45%, transparent 68%);
+  transform: translateX(-130%);
+  transition: transform .65s ease;
+  pointer-events: none;
+}
+.btn:hover::before { transform: translateX(130%); }
+
+@keyframes depth-orbit {
+  0%, 100% { rotate: 0deg; scale: 1; }
+  50% { rotate: 8deg; scale: 1.04; }
+}
+@keyframes depth-float {
+  0%, 100% { margin-top: 0; }
+  50% { margin-top: -10px; }
+}
+@keyframes surface-flow { to { stroke-dashoffset: -136; } }
+@keyframes core-breathe {
+  0%, 100% { transform: scale(.86); opacity: .08; }
+  50% { transform: scale(1.08); opacity: .16; }
+}
+@keyframes core-mark-float {
+  0%, 100% { transform: translateY(0) rotateX(0); }
+  50% { transform: translateY(-9px) rotateX(5deg); }
+}
+@keyframes shell-pulse {
+  0%, 100% { opacity: .72; scale: 1; }
+  50% { opacity: 1; scale: 1.035; }
+}
+
+@media (max-width: 820px) {
+  .portrait::before { right: -4%; }
+  .portrait::after { right: 3%; }
+  .ledger li:hover, .register article:hover { transform: none; padding-inline: 0; }
+}
+
 /* ── Уважение к настройкам движения ───────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
@@ -819,6 +1015,9 @@ footer nav a:hover { color: var(--sky); border-bottom-color: currentColor; }
     transition-duration: .001ms !important;
   }
   .js .reveal { opacity: 1; transform: none; }
+  .portrait img, .portrait figcaption, .portrait-strata, .shells, .btn {
+    transform: none !important;
+  }
   @supports (interpolate-size: allow-keywords) {
     .level::details-content { transition: none; }
   }
