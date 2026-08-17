@@ -1,309 +1,33 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Диагностика практики коуча — Академия «Алтей»</title>
-  <meta name="description" content="Определите уровень практики коуча за 2 минуты: диагностика, сильные стороны и следующий шаг профессионального роста в онтологическом подходе.">
-  <meta name="theme-color" content="#eef6fd">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ru_RU">
-  <meta property="og:title" content="На каком уровне вы создаёте изменения с клиентами?">
-  <meta property="og:description" content="5 вопросов, 2 минуты — и персональный разбор вашей практики в Telegram.">
-  <meta property="og:image" content="assets/elena-mileshko.jpg">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/fonts/golos-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/literata-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Онтологический рентген практики | Академия «Алетейя»</title>
+<meta name="description" content="Пять вопросов покажут уровень практики, её сильную сторону, точку потолка и один следующий шаг. Результат текстом и голосом Елены Милешко.">
+<link rel="canonical" href="https://altei-coach-quiz.vercel.app/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://altei-coach-quiz.vercel.app/">
+<meta property="og:title" content="Онтологический рентген практики"><meta property="og:description" content="Пять вопросов покажут, на каком уровне вы создаёте изменения.">
+<meta property="og:image" content="https://altei-coach-quiz.vercel.app/assets/og-cover.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#f4f1ea"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>
+:root{--p:#f4f1ea;--i:#1b1a17;--m:#6b6760;--a:#b4552f;--l:#dcd6c8;--w:#fffdf8;--s:Georgia,"Times New Roman",serif;--g:Arial,"Helvetica Neue",sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--p);color:var(--i);font:18px/1.55 var(--g);text-rendering:optimizeLegibility}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:radial-gradient(#8c8475 .45px,transparent .55px);background-size:5px 5px;z-index:-1}a{color:inherit}.skip{position:absolute;left:16px;top:-80px;background:var(--i);color:#fff;padding:12px 16px;z-index:20}.skip:focus{top:16px}.wrap{width:min(1120px,calc(100% - 48px));margin:auto}.screen{padding:132px 0;border-top:1px solid var(--l)}.hero{min-height:100svh;display:flex;align-items:center;padding:84px 0}.copy,.hero-in{max-width:620px}.brand,.eye{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--m)}h1,h2{font-family:var(--s);font-weight:400;letter-spacing:-.035em;margin:0;text-wrap:balance}h1{font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.03;margin:30px 0 24px}h2{font-size:clamp(2rem,4vw,3rem);line-height:1.08;margin-bottom:28px}p{margin:0 0 18px}.lead{font:clamp(1.25rem,2.2vw,1.55rem)/1.42 var(--s)}.zone{margin-top:34px}.condition,.micro{font-size:14px;color:var(--m);max-width:520px}.condition{margin-bottom:12px}.cta{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border:1px solid var(--a);background:var(--a);color:#fff;text-decoration:none;font-weight:700;transition:.2s;overflow:hidden}.cta:before{content:"";position:absolute;inset:-80% -30%;background:linear-gradient(105deg,transparent 35%,#ffffff44 50%,transparent 65%);transform:translateX(-80%);transition:.65s}.cta:hover,.cta:focus-visible{background:#934325;box-shadow:0 12px 30px #4a2a1c2e;transform:translateY(-2px)}.cta:hover:before{transform:translateX(80%)}.micro{margin-top:11px}.levels{display:grid;grid-template-columns:minmax(300px,1fr) minmax(280px,1fr);gap:90px;align-items:center}.rings{position:relative;width:min(430px,84vw);aspect-ratio:1;margin:auto}.ring{position:absolute;border:1px solid #1b1a1775;border-radius:50%;display:grid;place-items:start center;padding-top:10%;transition:.35s;cursor:default}.ring span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;background:var(--p);padding:2px 8px;white-space:nowrap}.ring small{position:absolute;left:50%;top:50%;width:max-content;max-width:190px;transform:translate(-50%,-42%);font-size:13px;text-align:center;opacity:0;transition:.25s;color:var(--m)}.r1{inset:0}.r2{inset:12%}.r3{inset:25%}.r4{inset:39%;background:var(--a);border-color:var(--a);color:#fff;box-shadow:0 14px 34px #b4552f33}.r4 span{background:transparent;color:#fff;padding-top:17%}.r4 small{color:#fff}.ring:hover,.ring:focus,.ring.active{transform:scale(1.025);border-color:var(--a);box-shadow:0 16px 34px #4e3d3017;outline:0}.ring:hover small,.ring:focus small,.ring.active small{opacity:1}.ring:hover>span,.ring:focus>span,.ring.active>span{opacity:.2}.levels-list{font:1.25rem/1.8 var(--s);margin:0 0 30px;padding:0;list-style:none}.result{padding:0;margin:0 0 32px;list-style:none}.result li{padding:13px 0;border-bottom:1px solid var(--l)}.result li:before{content:"↳";color:var(--a);margin-right:12px}.voice{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:18px;background:var(--w);border:1px solid var(--l);padding:20px;margin-top:32px;box-shadow:0 16px 45px #463a2b12}.play{width:52px;height:52px;border-radius:50%;background:var(--a);color:#fff;display:grid;place-items:center}.voice strong{display:block}.voice span{font-size:14px;color:var(--m)}.author{display:grid;grid-template-columns:160px minmax(0,520px);gap:42px;align-items:center}.author img{width:160px;height:190px;object-fit:cover;filter:saturate(.8) contrast(1.04);border-radius:80px 80px 6px 6px}.credentials p{margin:7px 0}.audience{max-width:800px;margin:0;padding:0;list-style:none}.audience li{font:clamp(1.2rem,2.3vw,1.55rem)/1.45 var(--s);padding:22px 0;border-bottom:1px solid var(--l)}.final{text-align:center}.final .copy{margin:auto}.final .zone{display:flex;flex-direction:column;align-items:center}footer{padding:38px 0 110px;border-top:1px solid var(--l);font-size:13px;color:var(--m)}.foot{display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap}.legal{display:flex;gap:18px}.sticky{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:10;box-shadow:0 14px 34px #32241b3d}[data-reveal]{opacity:0;transform:translateY(18px);transition:.7s}[data-reveal].seen{opacity:1;transform:none}
+@media(max-width:760px){body{font-size:16px}.wrap{width:min(100% - 32px,620px)}.screen{padding:76px 0}.hero{padding:64px 0;align-items:flex-start}.hero-in{padding-top:8vh}h1{font-size:clamp(2rem,10vw,2.25rem)}.levels{grid-template-columns:1fr;gap:54px}.rings{width:min(360px,88vw)}.ring small{max-width:150px;font-size:11px}.author{grid-template-columns:110px 1fr;gap:24px}.author img{width:110px;height:140px}.voice{grid-template-columns:44px 1fr auto;padding:16px;gap:12px}.play{width:44px;height:44px}.sticky.visible{display:flex}.final{padding-bottom:110px}footer{padding-bottom:90px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before{animation:none!important;transition:none!important}[data-reveal]{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-  <!--
-    Графический язык страницы — «разрез»: линия поверхности и четыре
-    вложенные оболочки под ней. Тот же объект используется в hero,
-    в блоке уровней (как селектор) и в финальном CTA (как марка).
-  -->
-  <svg class="svg-defs" aria-hidden="true" focusable="false">
-    <defs>
-      <linearGradient id="shell-1" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#e9f3fc"/><stop offset="1" stop-color="#d8e9f8"/>
-      </linearGradient>
-      <linearGradient id="shell-2" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#c6dcf2"/><stop offset="1" stop-color="#aac8e8"/>
-      </linearGradient>
-      <linearGradient id="shell-3" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#7ba2cd"/><stop offset="1" stop-color="#5b83b2"/>
-      </linearGradient>
-      <linearGradient id="shell-4" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#2e497c"/><stop offset="1" stop-color="#132542"/>
-      </linearGradient>
-    </defs>
-  </svg>
-
-  <a class="skip-link" href="#top">Перейти к содержанию</a>
-
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Академия коучинга Алтей — на главную">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 15" fill="none"><path d="M0.5 3h23" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M1.5 3A10.5 10.5 0 0 0 22.5 3Z" fill="currentColor" fill-opacity=".22"/><path d="M5.5 3A6.5 6.5 0 0 0 18.5 3Z" fill="currentColor" fill-opacity=".45"/><path d="M9 3a3 3 0 0 0 6 0Z" fill="currentColor"/></svg>
-      </span>
-      <span>Академия коучинга «Алтей»</span>
-    </a>
-    <a class="link-cta" data-telegram href="https://t.me/testaletheia_academy_bot">Пройти тест</a>
-  </header>
-
-  <main id="top">
-
-    <!-- ── Страта 1: поверхность ─────────────────────────────── -->
-    <section class="stratum stratum-surface hero">
-      <div class="wrap">
-      <div class="hero-grid">
-
-        <div class="hero-copy">
-          <p class="attribution reveal">Диагностика практики от Елены Милешко – практикующего коуча с опытом более 8 лет, автора онтологического подхода в коучинге и программы профессиональной переподготовки специалистов</p>
-          <h1 class="reveal">На каком уровне вы создаете изменения в работе с клиентами?</h1>
-          <p class="lead reveal">5 вопросов, 2 минуты — и вы увидите, на каком уровне сегодня строится ваша практика и какие профессиональные результаты закономерно возникают на этом уровне.</p>
-          <p class="spec reveal" aria-label="Кратко о диагностике">
-            <span>5 вопросов</span><span>2 минуты</span><span>Персональный разбор</span>
-          </p>
-          <div class="reveal">
-            <a class="btn btn-primary" data-telegram href="https://t.me/testaletheia_academy_bot">Узнать свой уровень работы в Telegram <span class="btn-arrow" aria-hidden="true">↗</span></a>
-            <p class="micro">Тест займет 2 минуты. В конце – персональный разбор, главный ограничитель роста вашей практики и следующий шаг профессионального развития.</p>
-          </div>
-        </div>
-
-        <figure class="portrait reveal">
-          <img src="assets/elena-mileshko.jpg" width="720" height="900" alt="Елена Милешко, практикующий коуч и автор онтологического подхода" fetchpriority="high">
-          <figcaption>
-            <strong>Елена Милешко</strong>
-            <span>8+ лет практики · автор онтологического подхода</span>
-          </figcaption>
-          <!-- линия поверхности + оболочки под ней -->
-          <svg class="portrait-strata" viewBox="0 0 400 132" preserveAspectRatio="xMidYMin slice" aria-hidden="true" focusable="false">
-            <path d="M0 1.5h400" stroke="#a9cbeb" stroke-width="1"/>
-            <path d="M20 1.5A180 180 0 0 0 380 1.5" fill="none" stroke="#d5eafa" stroke-width="1"/>
-            <path d="M68 1.5A132 132 0 0 0 332 1.5" fill="none" stroke="#cbe2f7" stroke-width="1"/>
-            <path d="M114 1.5A86 86 0 0 0 286 1.5" fill="none" stroke="#bcd8f1" stroke-width="1"/>
-            <path d="M158 1.5A42 42 0 0 0 242 1.5Z" fill="#d9e9f8" stroke="#a9cbeb" stroke-width="1"/>
-          </svg>
-        </figure>
-
-      </div>
-
-      <div class="outcome reveal">
-        <p class="label">После прохождения</p>
-        <ul class="outcome-list">
-          <li>Персональный разбор своей практики;</li>
-          <li>Сильные стороны вашего текущего подхода;</li>
-          <li>Главный фактор, который сегодня ограничивает профессиональный рост;</li>
-          <li>Рекомендации по переходу на следующий уровень мастерства.</li>
-        </ul>
-      </div>
-      </div>
-    </section>
-
-    <!-- ── Страта 2: модель ──────────────────────────────────── -->
-    <section class="stratum stratum-light levels" id="levels" aria-labelledby="levels-title">
-      <div class="wrap">
-        <header class="head reveal">
-          <p class="label">Смысловое ядро</p>
-          <h2 id="levels-title">Четыре уровня работы специалиста</h2>
-          <div class="head-body">
-            <p>В современной помогающей практике изменения создаются на разных уровнях. Каждый уровень работы помогает клиенту по-своему.</p>
-            <p>В практике можно работать на разных уровнях. Это не вопрос "лучше" или "хуже". Каждый из них решает свои задачи и имеет свои границы.</p>
-            <p class="head-note">Большинство специалистов интуитивно смешивают эти уровни, не замечая, какой из них становится основой их практики. Именно это и показывает диагностика.</p>
-          </div>
-        </header>
-
-        <div class="model reveal">
-
-          <div class="model-figure">
-            <div class="model-sticky">
-              <svg class="shells" viewBox="0 0 400 230" role="img" aria-labelledby="shells-title shells-desc">
-                <title id="shells-title">Разрез четырёх уровней работы</title>
-                <desc id="shells-desc">Линия поверхности и четыре вложенные оболочки под ней: внешняя — «Ситуации», далее «Стратегии», «Идентичность», ядро — «Бытие».</desc>
-                <g class="shell" data-shell="1"><path d="M6 24A194 194 0 0 0 394 24Z" fill="url(#shell-1)"/></g>
-                <g class="shell" data-shell="2"><path d="M54 24A146 146 0 0 0 346 24Z" fill="url(#shell-2)"/></g>
-                <g class="shell" data-shell="3"><path d="M102 24A98 98 0 0 0 298 24Z" fill="url(#shell-3)"/></g>
-                <g class="shell" data-shell="4"><path d="M150 24A50 50 0 0 0 250 24Z" fill="url(#shell-4)"/></g>
-                <path class="surface-line" d="M0 24h400"/>
-                <g class="shell-ticks" aria-hidden="true">
-                  <text x="200" y="198" data-tick="1">01</text>
-                  <text x="200" y="150" data-tick="2">02</text>
-                  <text x="200" y="102" data-tick="3">03</text>
-                  <text x="200" y="53" data-tick="4">04</text>
-                </g>
-              </svg>
-              <p class="figure-caption"><span>поверхность</span><span>ядро</span></p>
-            </div>
-          </div>
-
-          <div class="model-list">
-            <details class="level" name="levels" data-level="1" open>
-              <summary>
-                <span class="level-num">01</span>
-                <span class="level-name">
-                  <strong>Ситуации</strong>
-                  <small>Решение конкретных задач</small>
-                </span>
-                <span class="level-sign" aria-hidden="true"></span>
-              </summary>
-              <div class="level-body">
-                <div><h3>Суть взаимодействия с клиентом</h3><p>Клиент обращается, когда сам не справляется с конкретной проблемой: конфликт, выбор, кризисная задача. Специалист выступает в роли помощника, тушащего «пожары».</p></div>
-                <div><h3>К чему ведет практика</h3><p>Хорошо помогает в решении конкретных задач. Однако если источник возникновения ситуации остается прежним, похожие запросы могут возвращаться.</p></div>
-              </div>
-            </details>
-
-            <details class="level" name="levels" data-level="2">
-              <summary>
-                <span class="level-num">02</span>
-                <span class="level-name">
-                  <strong>Стратегии</strong>
-                  <small>Планы и действия</small>
-                </span>
-                <span class="level-sign" aria-hidden="true"></span>
-              </summary>
-              <div class="level-body">
-                <div><h3>Суть взаимодействия с клиентом</h3><p>Клиент приходит за планом, мотивацией и дисциплиной. Специалист помогает выстроить пошаговый маршрут, становясь «внешней опорой» или тренером.</p></div>
-                <div><h3>К чему ведет практика</h3><p>Если причины сопротивления лежат глубже уровня действий, даже хороший план может не реализоваться. Не из-за лени, а потому что сама воля к действию рождается из того же источника, который создает проблему.</p></div>
-              </div>
-            </details>
-
-            <details class="level" name="levels" data-level="3">
-              <summary>
-                <span class="level-num">03</span>
-                <span class="level-name">
-                  <strong>Идентичность</strong>
-                  <small>Новые роли и убеждения</small>
-                </span>
-                <span class="level-sign" aria-hidden="true"></span>
-              </summary>
-              <div class="level-body">
-                <div><h3>Суть взаимодействия с клиентом</h3><p>Работа направлена на расширение восприятия: увидеть ситуацию чужими глазами, примерить новую роль, сменить убеждения. Дает мощные инсайты.</p></div>
-                <div><h3>К чему ведет практика</h3><p>Само понимание себя еще не гарантирует, что новый способ жить станет естественным. Осознания могут оставаться на уровне интеллектуального опыта, не переходя в устойчивые изменения. Рефлексия часто становится формой побега от реальных действий.</p></div>
-              </div>
-            </details>
-
-            <details class="level level-core" name="levels" data-level="4">
-              <summary>
-                <span class="level-num">04</span>
-                <span class="level-name">
-                  <strong>Бытие</strong>
-                  <small>Онтологический уровень</small>
-                </span>
-                <span class="level-sign" aria-hidden="true"></span>
-              </summary>
-              <div class="level-body">
-                <div><h3>Суть взаимодействия с клиентом</h3><p>Работа ведется с первоисточником — конфигурацией, из которой рождаются мысли, роли и стратегии человека. Специалист работает не со следствиями, а с самой структурой, откуда они возникают.</p></div>
-                <div><h3>К чему ведет практика</h3><p>Работа через форму бытия позволяет клиенту перестроить сам способ жить, вернуть его в подлинное состояние. И тогда новые способы жить становятся естественными, а изменения приобретают устойчивость.</p></div>
-              </div>
-            </details>
-          </div>
-        </div>
-
-        <p class="statement reveal">5 вопросов, 2 минуты — и вы точно узнаете, на каком из 4 уровней работаете сейчас — и что это значит для ваших профессиональных результатов.</p>
-
-        <div class="close-block reveal">
-          <h3>Увидеть основу своей практики</h3>
-          <p>Цель диагностики — не определить, какой уровень "правильный", а показать, какой уровень сегодня определяет именно вашу практику. Потому что именно от него зависят типичные результаты ваших клиентов, сложность вашей работы и дальнейшие возможности профессионального роста.</p>
-          <a class="btn btn-secondary" data-telegram href="https://t.me/testaletheia_academy_bot">Определить свой уровень <span class="btn-arrow" aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Страта 3: ядро ────────────────────────────────────── -->
-    <section class="stratum stratum-core depth" id="depth" aria-labelledby="depth-title">
-      <div class="wrap">
-        <header class="head reveal">
-          <p class="label">Работа на четвёртом уровне</p>
-          <h2 id="depth-title">Как обычно меняется практика, когда специалист начинает работать глубже</h2>
-          <div class="head-body">
-            <p>По мере перехода на более глубокий уровень работы меняются не только методики, но и весь фундамент вашей практики, и как следствие – результаты клиентов и изменение вашей собственной реализации.</p>
-          </div>
-        </header>
-
-        <ul class="ledger">
-          <li class="reveal"><h3>Появляются устойчивые результаты.</h3><p>Клиент меняет сам источник своих решений. Ему становятся доступны результаты, которые не удавалось получить, сколько бы он ни менял стратегии и действия.</p></li>
-          <li class="reveal"><h3>Клиент меньше зависит от специалиста.</h3><p>Вы больше не выполняете роль внешней опоры или мотиватора — клиент двигается из собственного состояния, без постоянной вашей подпитки.</p></li>
-          <li class="reveal"><h3>Меняется ценность вашей работы.</h3><p>Клиенты видят разницу между разовым решением и настоящей трансформацией — и готовы платить больше за такие изменения.</p></li>
-          <li class="reveal"><h3>Увеличивается сарафанное радио.</h3><p>Когда люди получают не просто короткие инсайты, а реальную трансформацию жизни, они активно рекомендуют вас как помогающего практика.</p></li>
-          <li class="ledger-final reveal"><h3>Вы выходите из конкуренции техник.</h3><p>Вы перестаете соревноваться набором сертификатов и методик. Главным инструментом метода становится ваша подлинность и глубина.</p></li>
-        </ul>
-
-        <div class="conclusion reveal">
-          <p>Эти изменения не возникают автоматически после изучения новой техники или метода. Они появляются тогда, когда меняется уровень, с которого сам специалист создает изменения.</p>
-          <p>Именно поэтому бывает трудно объективно оценить собственную практику изнутри.</p>
-          <p>Диагностика помогает увидеть, какой уровень сегодня действительно лежит в основе вашей работы и что закономерно становится следующим профессиональным шагом.</p>
-        </div>
-
-        <div class="close-block close-block-core reveal">
-          <a class="btn btn-outline" data-telegram href="https://t.me/testaletheia_academy_bot">Определить уровень своей практики <span class="btn-arrow" aria-hidden="true">↗</span></a>
-          <p class="micro">5 вопросов, 2 минуты — персональный разбор вашей практики покажет, насколько близко вы уже подошли к этому уровню и что сегодня является вашим следующим шагом.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Страта 4: адресат ─────────────────────────────────── -->
-    <section class="stratum stratum-surface audience" id="audience" aria-labelledby="audience-title">
-      <div class="wrap">
-        <header class="head reveal">
-          <p class="label">Для кого</p>
-          <h2 id="audience-title">Диагностика для тех, кто работает с изменениями — или готовится начать</h2>
-        </header>
-
-        <div class="register">
-          <article class="reveal">
-            <p class="register-label">Практикующий специалист</p>
-            <h3>Коуч или психолог</h3>
-            <p>Вы практикующий коуч или психолог. Клиенты получают результаты, но вы замечаете, что часть из них снова возвращается с похожими запросами. Вы хотите понять, от чего действительно зависит глубина изменений и почему один и тот же метод у одного клиента срабатывает навсегда, а у другого — на время.</p>
-          </article>
-          <article class="reveal">
-            <p class="register-label">Смежная практика</p>
-            <h3>Работа с МАК, телом, играми</h3>
-            <p>Вы — специалист смежной практики: работаете с МАК, трансформационными играми, ароматерапией или телом. Ваш метод работает, клиенты видят результат. Но со стороны это иногда встречают скепсисом: «эзотерика», «просто способ снять напряжение», а не системная работа с изменениями. Тест покажет, на каком уровне на самом деле выстроена ваша практика.</p>
-          </article>
-          <article class="reveal">
-            <p class="register-label">Точка старта</p>
-            <h3>Обучались, но не вышли в практику</h3>
-            <p>Возможно, вы ещё не практикующий специалист — но за плечами у вас собственный опыт глубокой работы с коучем, терапевтом или наставником — или даже пройденное обучение коучингу, но вы так и не вышли в практику. Вопрос в том, на каком уровне вы сейчас готовы начать свою практику: ограничиться решением отдельных задач или с самого начала развивать способность создавать более глубокие и устойчивые изменения.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Страта 5: ядро / решение ──────────────────────────── -->
-    <section class="stratum stratum-core final" id="final" aria-labelledby="final-title">
-      <div class="wrap final-inner reveal">
-        <svg class="core-mark" viewBox="0 0 120 64" aria-hidden="true" focusable="false">
-          <path d="M0 3h120" stroke="currentColor" stroke-width="1" opacity=".3"/>
-          <path d="M3 3A57 57 0 0 0 117 3" fill="none" stroke="currentColor" stroke-width="1" opacity=".22"/>
-          <path d="M22 3A38 38 0 0 0 98 3" fill="none" stroke="currentColor" stroke-width="1" opacity=".38"/>
-          <path d="M41 3A19 19 0 0 0 79 3Z" fill="currentColor" opacity=".9"/>
-        </svg>
-        <p class="label">Ваш следующий шаг</p>
-        <h2 id="final-title">Посмотрите на свою практику со стороны</h2>
-        <p>Ответьте на 5 вопросов и откройте следующий шаг профессионального роста прямо сейчас.</p>
-        <a class="btn btn-light" data-telegram href="https://t.me/testaletheia_academy_bot">Пройти диагностику практики <span class="btn-arrow" aria-hidden="true">↗</span></a>
-        <small>Займёт около двух минут</small>
-      </div>
-    </section>
-  </main>
-
-  <footer class="stratum stratum-core">
-    <div class="wrap footer-inner">
-      <div class="brand">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 15" fill="none"><path d="M0.5 3h23" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M1.5 3A10.5 10.5 0 0 0 22.5 3Z" fill="currentColor" fill-opacity=".22"/><path d="M5.5 3A6.5 6.5 0 0 0 18.5 3Z" fill="currentColor" fill-opacity=".45"/><path d="M9 3a3 3 0 0 0 6 0Z" fill="currentColor"/></svg>
-        </span>
-        <span>Академия коучинга «Алтей»</span>
-      </div>
-      <nav aria-label="Юридические ссылки">
-        <a href="legal.html#privacy">Политика конфиденциальности</a><a href="legal.html#offer">Оферта</a><a data-telegram href="https://t.me/testaletheia_academy_bot">Telegram</a>
-      </nav>
-      <p>© 2026 Академия коучинга «Алтей». Все права защищены.</p>
-    </div>
-  </footer>
-
-  <a class="mobile-cta" data-telegram href="https://t.me/testaletheia_academy_bot">Пройти тест <span class="btn-arrow" aria-hidden="true">→</span></a>
-</body>
-</html>
+<a class="skip" href="#content">Перейти к содержанию</a>
+<main id="content">
+<section class="hero"><div class="wrap"><div class="hero-in" data-reveal><div class="brand">Академия «Алетейя»</div><h1 id="hero-title">На каком уровне вы создаёте изменения?</h1><p class="lead">Их четыре. С трёх из них клиент возвращается через полгода с тем же запросом.</p><p>5 вопросов покажут, на каком работаете вы.</p><div class="zone"><p class="condition">Результат придёт в канале Елены. Для получения нужна подписка, отписаться можно в один клик.</p><a class="cta" data-source="hero" href="https://t.me/testaletheia_academy_bot" aria-label="Пройти 5 вопросов, ссылка откроется в Telegram">Пройти 5 вопросов</a><p class="micro">2 минуты в Telegram. Отвечаете кнопками, писать ничего не нужно.</p></div></div></div></section>
+<section class="screen" id="levels"><div class="wrap levels"><div class="rings" role="img" aria-label="Четыре вложенных уровня работы специалиста: Ситуации, Стратегии, Идентичность и Бытие" data-reveal><div class="ring r1" tabindex="0"><span>Ситуации</span><small>Ситуации: внешний контур практики</small></div><div class="ring r2" tabindex="0"><span>Стратегии</span><small>Стратегии: следующий слой работы</small></div><div class="ring r3" tabindex="0"><span>Идентичность</span><small>Идентичность: ближе к центру</small></div><div class="ring r4" tabindex="0"><span>Бытие</span><small>Бытие: ядро схемы</small></div></div><div class="copy" data-reveal><div class="eye">Четыре уровня работы</div><h2>Свой уровень никто не выбирал</h2><ul class="levels-list" aria-hidden="true"><li>Ситуации</li><li>Стратегии</li><li>Идентичность</li><li>Бытие</li></ul><p>Он сложился сам: из обучений, первых клиентов и того, как вы привыкли слушать человека.</p><p>Изнутри он не виден. Он ощущается просто как «моя работа».</p><div class="zone"><p class="condition">Результат выдаётся после подписки на канал Елены.</p><a class="cta" data-source="levels" href="https://t.me/testaletheia_academy_bot" aria-label="Пройти 5 вопросов, ссылка откроется в Telegram">Пройти 5 вопросов</a></div></div></div></section>
+<section class="screen"><div class="wrap"><div class="copy" data-reveal><div class="eye">Что придёт в ответ</div><h2>Онтологический рентген практики</h2><p>Посмотрите на практику со стороны, без самооценки и готового ярлыка. Так становится видна точка, которую привычный способ работы обходит.</p><ul class="result"><li>ваш уровень из четырёх</li><li>что на нём получается сильнее всего</li><li>где практика упирается в потолок</li><li>один следующий шаг вместо списка рекомендаций</li></ul><div class="voice"><div class="play" aria-hidden="true">▶</div><div><strong>Голосовое от Елены</strong><span>Записано отдельно под каждый профиль результата</span></div><span>≈ 4:00</span></div></div></div></section>
+<section class="screen"><div class="wrap"><div class="author" data-reveal><img src="assets/elena-mileshko.jpg" width="160" height="190" loading="lazy" alt="Елена Милешко, автор онтологического подхода в коучинге"><div class="credentials"><h2>Елена Милешко</h2><p>8 лет практики</p><p>Автор онтологического подхода в коучинге</p><p>Ведёт программу профессиональной переподготовки специалистов</p></div></div></div></section>
+<section class="screen"><div class="wrap" data-reveal><div class="eye">Кому подойдёт</div><h2>Если практика остановилась</h2><ul class="audience"><li>Практикуете, но часть клиентов возвращается с тем же запросом</li><li>Работаете с МАК, телом или играми и устали от ярлыка «эзотерика»</li><li>Отучились на коуча, но так и не вышли в практику</li></ul></div></section>
+<section class="screen final"><div class="wrap"><div class="copy" data-reveal><div class="eye">Посмотреть со стороны</div><h2>Свой уровень нельзя увидеть изнутри</h2><p class="lead">5 вопросов. 2 минуты. Разбор текстом и голосом.</p><div class="zone"><p class="condition">Результат придёт в канале Елены. Для получения нужна подписка, отписаться можно в один клик.</p><a class="cta" data-source="final" href="https://t.me/testaletheia_academy_bot" aria-label="Пройти 5 вопросов, ссылка откроется в Telegram">Пройти 5 вопросов</a><p class="micro">Откроется Telegram. Отвечаете кнопками, писать ничего не нужно.</p></div></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>Академия «Алетейя», 2026</span><nav class="legal" aria-label="Юридическая информация"><a href="legal.html#privacy">Политика конфиденциальности</a><a href="legal.html#offer">Оферта</a></nav></div></footer>
+<a class="cta sticky" data-source="sticky" href="https://t.me/testaletheia_academy_bot" aria-label="Пройти 5 вопросов, ссылка откроется в Telegram">Пройти 5 вопросов</a>
+<script>
+(()=>{const titles={method:'Вы знаете методики. Почему сессии дают разный результат?',burnout:'Клиент двигается, пока вы рядом. Что не так с практикой?'};const v=new URLSearchParams(location.search).get('v');if(titles[v])document.getElementById('hero-title').textContent=titles[v];const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('seen');io.unobserve(e.target)}}),{threshold:.14});document.querySelectorAll('[data-reveal]').forEach(e=>io.observe(e));const sticky=document.querySelector('.sticky'),levels=document.getElementById('levels');const updateSticky=()=>sticky.classList.toggle('visible',scrollY>levels.offsetTop+levels.offsetHeight);addEventListener('scroll',updateSticky,{passive:true});updateSticky();document.querySelectorAll('.ring').forEach(r=>r.addEventListener('click',()=>{document.querySelectorAll('.ring').forEach(x=>x.classList.remove('active'));r.classList.add('active')}));document.querySelectorAll('a[data-source]').forEach(a=>a.addEventListener('click',()=>{if(typeof window.ym==='function'&&window.YANDEX_METRIKA_ID)window.ym(window.YANDEX_METRIKA_ID,'reachGoal','telegram_click',{source:a.dataset.source})}))})();
+</script>
+</body></html>
