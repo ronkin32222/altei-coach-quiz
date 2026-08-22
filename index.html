@@ -796,6 +796,145 @@ p:last-child{margin-bottom:0}
   footer{padding-bottom:64px!important}
 }
 </style>
+<style id="benefit-timeline-v3">
+/* Numbers live on the route; copy gets its own uninterrupted space. */
+.benefits-grid{max-width:980px!important;gap:26px!important;padding:8px 50px!important}
+.benefits-grid:before{left:50%!important;width:1px!important;opacity:.75!important}
+.benefits-grid article.benefit-step,
+.benefits-grid article.benefit-step:nth-child(n){
+  display:block!important;
+  width:44%!important;
+  padding:25px 26px 22px!important;
+  border-radius:18px!important;
+  overflow:visible!important;
+}
+.benefits-grid article.benefit-step:nth-child(1){width:45%!important;margin-left:1%!important;transform:translateY(0) rotate(-.25deg)!important}
+.benefits-grid article.benefit-step:nth-child(2){width:42%!important;margin-right:3%!important;transform:translateY(14px) rotate(.3deg)!important}
+.benefits-grid article.benefit-step:nth-child(3){width:47%!important;margin-left:-1%!important;transform:translateY(4px) rotate(.2deg)!important}
+.benefits-grid article.benefit-step:nth-child(4){width:46%!important;margin-right:-1%!important;transform:translateY(20px) rotate(-.25deg)!important}
+.benefits-grid article.benefit-step:nth-child(5){width:43%!important;margin-left:4%!important;transform:translateY(8px) rotate(.25deg)!important}
+.benefits-grid article.benefit-step>span{
+  position:absolute!important;
+  left:auto!important;
+  right:-64px!important;
+  top:50%!important;
+  z-index:3!important;
+  width:42px!important;
+  height:42px!important;
+  transform:translateY(-50%)!important;
+  border:5px solid #215f91!important;
+  border-radius:50%!important;
+  background:#fff!important;
+  color:#176fa2!important;
+  box-shadow:0 0 0 7px rgba(120,202,239,.14)!important;
+  font-size:11px!important;
+}
+.benefits-grid article.benefit-step:nth-child(even)>span{
+  left:-64px!important;
+  right:auto!important;
+}
+.benefits-grid article.benefit-step:before{display:none!important}
+.benefits-grid article.benefit-step:not(:last-child):after{
+  display:none!important;
+  content:none!important;
+}
+.benefit-toggle{
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  min-height:0!important;
+  padding:0 0 28px!important;
+  text-align:left!important;
+}
+.benefit-toggle strong{
+  display:block!important;
+  max-width:15ch!important;
+  color:#17384c!important;
+  font:500 clamp(1.45rem,2.2vw,2rem)/1.08 var(--s)!important;
+  letter-spacing:-.025em!important;
+}
+.benefit-toggle small{
+  position:absolute!important;
+  left:0!important;
+  bottom:0!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  width:max-content!important;
+  margin:0!important;
+  padding:6px 10px!important;
+  border:1px solid #9fcfe4!important;
+  border-radius:999px!important;
+  background:#f6fbfd!important;
+  color:#1471a2!important;
+  font-size:9px!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+}
+.benefit-toggle small:after{content:"  ↘";margin-left:5px}
+.benefit-step.open .benefit-toggle small:after{content:"  ↖"}
+.benefit-detail p{
+  margin:18px 0 0!important;
+  padding-top:16px!important;
+  border-top:1px solid #d6e7ee!important;
+}
+.benefits-grid article.benefit-step:hover{
+  border-color:#7ebbd5!important;
+  box-shadow:0 16px 34px rgba(6,47,75,.11)!important;
+}
+
+/* This is a supporting action; the main CTA follows below. */
+.benefits-summary{
+  width:min(680px,100%)!important;
+  padding:21px 23px!important;
+  grid-template-columns:minmax(0,1fr) 172px!important;
+  gap:7px 18px!important;
+}
+.benefits-summary .cta{
+  width:172px!important;
+  max-width:172px!important;
+  min-height:44px!important;
+  padding:6px 7px 6px 12px!important;
+  border-radius:10px!important;
+  font-size:9px!important;
+  line-height:1.25!important;
+  letter-spacing:.01em!important;
+}
+.benefits-summary .cta .tg-mark{
+  width:30px!important;
+  height:30px!important;
+  flex-basis:30px!important;
+  border-radius:7px!important;
+}
+.benefits-summary>p{font-size:13px!important;line-height:1.5!important}
+.benefits-summary>p:nth-of-type(2){font-size:1.05rem!important}
+.benefits-summary .micro{font-size:11px!important}
+
+@media(max-width:760px){
+  .benefits-grid{padding:4px 0 4px 34px!important;gap:16px!important}
+  .benefits-grid:before{left:12px!important}
+  .benefits-grid article.benefit-step,
+  .benefits-grid article.benefit-step:nth-child(n){
+    width:100%!important;
+    margin:0!important;
+    padding:20px!important;
+    transform:none!important;
+  }
+  .benefits-grid article.benefit-step>span,
+  .benefits-grid article.benefit-step:nth-child(even)>span{
+    left:-39px!important;
+    right:auto!important;
+    top:28px!important;
+    width:31px!important;
+    height:31px!important;
+    border-width:4px!important;
+    transform:none!important;
+    font-size:9px!important;
+  }
+  .benefit-toggle strong{font-size:1.35rem!important}
+  .benefits-summary{display:block!important;width:100%!important;padding:18px!important}
+  .benefits-summary .cta{width:100%!important;max-width:none!important;margin-top:11px!important}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#content">Перейти к содержанию</a>
