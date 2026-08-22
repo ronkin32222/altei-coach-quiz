@@ -239,6 +239,186 @@ body{background:#edf6fb}.screen{padding-top:104px;padding-bottom:104px}.hero-sta
 @media(max-width:1100px){.sphere-layout{grid-template-columns:1fr!important;gap:32px!important;min-height:0!important;padding-left:0!important}.sphere-shell{width:min(500px,calc(100vw - 72px))!important;margin:0 auto!important}.sphere-copy{width:min(680px,100%)!important;margin:0 auto!important}.level-story-card,.level-story-card:not(.active),.level-story-card.active{max-width:100%!important}.levels-cta-simple{margin-top:26px!important}}
 @media(max-width:760px){.benefits-grid article.benefit-step,.benefits-grid article.benefit-step:nth-child(1),.benefits-grid article.benefit-step:nth-child(2),.benefits-grid article.benefit-step:nth-child(3),.benefits-grid article.benefit-step:nth-child(4),.benefits-grid article.benefit-step:nth-child(5),.benefits-grid article.benefit-step.open{width:calc(100% - 18px)!important;max-width:none!important;padding:14px!important;grid-template-columns:36px minmax(0,1fr)!important}.benefits-grid article.benefit-step:nth-child(odd),.benefits-grid article.benefit-step:nth-child(even){align-self:flex-end!important}.benefits-grid article.benefit-step:nth-child(odd):not(:last-child):after,.benefits-grid article.benefit-step:nth-child(even):not(:last-child):after{content:"↓"!important;left:-5px!important;right:auto!important}.sphere-shell{width:min(342px,calc(100vw - 48px))!important}}</style>
 <link rel="stylesheet" href="styles.css">
+<style id="requested-block-fixes">
+/* Requested refinement: quieter summary and a readable interactive depth map. */
+.benefits-summary{
+  width:min(860px,100%)!important;
+  min-height:0!important;
+  margin:42px auto 0!important;
+  padding:28px 30px!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  gap:10px 28px!important;
+  align-items:center!important;
+  border:1px solid rgba(11,111,174,.2)!important;
+  border-radius:18px!important;
+  background:#e9f3f8!important;
+  color:#17384c!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+}
+.benefits-summary:has(.benefits-invite-svg){padding-right:30px!important}
+.benefits-summary>p{max-width:660px!important;margin:0 0 8px!important;color:#385b6e!important;font-size:15px!important;line-height:1.55!important}
+.benefits-summary>p:nth-of-type(2){font:500 1.35rem/1.3 var(--s)!important;color:#17384c!important}
+.benefits-summary .benefits-invite-svg{display:none!important}
+.benefits-summary .cta{grid-column:2!important;grid-row:1/4!important;min-width:260px!important;max-width:300px!important;min-height:56px!important;padding:8px 9px 8px 18px!important;border-radius:13px!important;font-size:13px!important;box-shadow:none!important}
+.benefits-summary .micro{grid-column:1/-1!important;max-width:720px!important;margin-top:5px!important;font-size:12px!important;color:#688391!important}
+.sticky{display:none!important}
+
+.sphere-level-section{min-height:0!important;padding:86px 0 98px!important;background:#eef7fb!important}
+.sphere-level-section:before{opacity:.35!important}
+.levels-intro{margin-bottom:54px!important}
+.sphere-layout{grid-template-columns:minmax(440px,.9fr) minmax(420px,1.1fr)!important;gap:72px!important;min-height:620px!important;align-items:center!important}
+.sphere-shell.level-depth-map{
+  position:relative!important;
+  display:block!important;
+  width:min(560px,46vw)!important;
+  aspect-ratio:1!important;
+  margin:auto!important;
+  border-radius:50%!important;
+  perspective:none!important;
+  cursor:default!important;
+  touch-action:auto!important;
+  background:radial-gradient(circle,#d8edf7 0 19%,#e3f2f8 19.3% 32%,#edf7fb 32.3% 45%,#f7fbfd 45.3% 58%,#fff 58.3% 100%)!important;
+  border:1px solid #acd3e5!important;
+  box-shadow:0 26px 70px rgba(6,47,75,.1)!important;
+  overflow:visible!important;
+}
+.sphere-shell:before,.sphere-shell:after,.sphere-cloud,.level-figures,.depth-note{display:none!important}
+.orbit-level{
+  position:absolute!important;
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  border-radius:50%!important;
+  border:1px solid rgba(11,111,174,.32)!important;
+  background:transparent!important;
+  color:#17384c!important;
+  box-shadow:none!important;
+  transform:none!important;
+  translate:none!important;
+  cursor:pointer!important;
+  transition:background .25s,border-color .25s,box-shadow .25s!important;
+}
+.orbit-level:hover,.orbit-level:focus-visible{
+  border-color:#0b6fae!important;
+  background:rgba(11,111,174,.06)!important;
+  outline:3px solid rgba(11,111,174,.14)!important;
+  outline-offset:2px!important;
+}
+.orbit-level.active{
+  border:2px solid #0b6fae!important;
+  background:rgba(11,111,174,.09)!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.8),0 10px 30px rgba(6,47,75,.08)!important;
+}
+.orbit-situation{inset:4%!important;z-index:1!important}
+.orbit-strategy{inset:17%!important;z-index:2!important}
+.orbit-identity{inset:30%!important;z-index:3!important}
+.orbit-being{inset:43%!important;z-index:4!important;background:#d4ebf5!important}
+.orbit-level>span{
+  position:absolute!important;
+  left:50%!important;
+  top:0!important;
+  bottom:auto!important;
+  width:max-content!important;
+  min-width:170px!important;
+  padding:9px 13px!important;
+  display:grid!important;
+  grid-template-columns:34px 1fr!important;
+  grid-template-rows:auto auto!important;
+  gap:0 9px!important;
+  align-items:center!important;
+  transform:translate(-50%,-50%)!important;
+  border:1px solid #b8d8e6!important;
+  border-radius:12px!important;
+  background:rgba(255,255,255,.96)!important;
+  color:#17384c!important;
+  text-align:left!important;
+  box-shadow:0 8px 18px rgba(6,47,75,.1)!important;
+}
+.orbit-level>span small{
+  grid-row:1/3!important;
+  display:grid!important;
+  place-items:center!important;
+  width:34px!important;
+  height:34px!important;
+  border-radius:9px!important;
+  background:#1975a7!important;
+  color:#fff!important;
+  font:700 12px/1 var(--g)!important;
+}
+.orbit-level>span strong{font:500 1rem/1.1 var(--s)!important;color:#17384c!important}
+.orbit-level>span em{font:400 11px/1.2 var(--g)!important;color:#607786!important}
+.orbit-strategy>span{left:100%!important;top:50%!important}
+.orbit-identity>span{top:100%!important}
+.orbit-being>span{top:50%!important}
+.orbit-level.active>span{border-color:#0b6fae!important;background:#fff!important;box-shadow:0 9px 24px rgba(11,111,174,.18)!important}
+.sphere-shell:focus-visible{outline:none!important}
+.sphere-copy{width:100%!important}
+.level-story{position:relative!important;min-height:390px!important}
+.level-story-card,.level-story-card:not(.active){
+  display:none!important;
+  opacity:0!important;
+  transform:none!important;
+}
+.level-story-card.active{
+  display:grid!important;
+  grid-template-columns:52px minmax(0,1fr)!important;
+  gap:20px!important;
+  width:100%!important;
+  max-width:570px!important;
+  min-height:0!important;
+  padding:30px!important;
+  border:1px solid #bfdbe7!important;
+  border-radius:18px!important;
+  background:#fff!important;
+  color:#17384c!important;
+  box-shadow:0 18px 46px rgba(6,47,75,.1)!important;
+  opacity:1!important;
+}
+.level-story-card.active>span{
+  display:grid!important;
+  place-items:center!important;
+  width:44px!important;
+  height:44px!important;
+  border-radius:12px!important;
+  background:#0b6fae!important;
+  color:#fff!important;
+  font-weight:700!important;
+}
+.level-story-card.active h3{margin:2px 0 18px!important;color:#17384c!important;font-size:1.65rem!important}
+.level-story-card.active h3 small{display:block!important;margin-top:5px!important;color:#68808d!important;font:400 12px/1.2 var(--g)!important}
+.level-story-card.active p{color:#476675!important;font-size:15px!important;line-height:1.6!important}
+.level-story:after{
+  content:"Нажмите на любой слой круга, чтобы увидеть его описание";
+  position:absolute;
+  left:0;
+  bottom:-34px;
+  color:#6a8390;
+  font-size:12px;
+}
+@media(max-width:1100px){
+  .sphere-layout{grid-template-columns:1fr!important;gap:64px!important;min-height:0!important}
+  .sphere-shell.level-depth-map{width:min(540px,calc(100vw - 100px))!important}
+  .sphere-copy{max-width:640px!important;margin:auto!important}
+  .level-story{min-height:0!important}
+  .level-story-card.active{max-width:none!important}
+}
+@media(max-width:760px){
+  .benefits-summary{display:block!important;padding:22px!important}
+  .benefits-summary .cta{width:100%!important;max-width:none!important;margin-top:14px!important}
+  .sphere-level-section{padding:68px 0 80px!important}
+  .sphere-shell.level-depth-map{width:min(330px,calc(100vw - 48px))!important}
+  .orbit-level>span{min-width:128px!important;padding:6px 8px!important;grid-template-columns:27px 1fr!important;gap:0 6px!important}
+  .orbit-level>span small{width:27px!important;height:27px!important;font-size:10px!important}
+  .orbit-level>span strong{font-size:.78rem!important}
+  .orbit-level>span em{font-size:8px!important}
+  .orbit-strategy>span{left:96%!important}
+  .level-story-card.active{grid-template-columns:36px minmax(0,1fr)!important;gap:12px!important;padding:21px!important}
+  .level-story-card.active>span{width:34px!important;height:34px!important;font-size:12px!important}
+  .level-story-card.active h3{font-size:1.35rem!important}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#content">Перейти к содержанию</a>
