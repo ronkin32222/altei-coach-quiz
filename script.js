@@ -1,4 +1,4 @@
-const TELEGRAM_URL = "https://t.me/testaletheia_academy_bot";
+const TELEGRAM_URL = "https://t.me/testaletheia_academy_bot?start=diag";
 
 document.querySelectorAll("[data-telegram]").forEach((link) => {
   link.href = TELEGRAM_URL;
