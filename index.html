@@ -980,6 +980,134 @@ footer{padding-top:26px!important;padding-bottom:32px!important}
   .final{padding-top:54px!important;padding-bottom:58px!important}
 }
 </style>
+<style id="circle-clarity-v4">
+/* Clear fixed label zones; no label may collapse into the core. */
+.sphere-shell.level-depth-map{
+  isolation:isolate!important;
+  overflow:visible!important;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(89,174,214,.24) 0 12%,transparent 12.5%),
+    radial-gradient(circle,#dceff7 0 19%,#e8f5fa 19.5% 32%,#f1f9fc 32.5% 45%,#f8fcfe 45.5% 58%,#fff 58.5% 100%)!important;
+  box-shadow:
+    inset 0 0 50px rgba(58,137,176,.1),
+    0 34px 74px rgba(15,72,102,.13)!important;
+}
+.sphere-shell.level-depth-map:before,
+.sphere-shell.level-depth-map:after{
+  content:""!important;
+  position:absolute!important;
+  display:block!important;
+  z-index:8!important;
+  pointer-events:none!important;
+  border:1px solid rgba(255,255,255,.9)!important;
+  border-radius:50%!important;
+}
+.sphere-shell.level-depth-map:before{
+  inset:auto 6% 13% auto!important;
+  width:52px!important;
+  height:52px!important;
+  background:radial-gradient(circle at 30% 24%,#fff 0 8%,#9cddf4 25%,#2381b3 68%,#104b70 100%)!important;
+  box-shadow:inset 8px 8px 12px rgba(255,255,255,.38),inset -8px -10px 14px rgba(4,42,67,.3),0 16px 24px rgba(11,75,111,.22)!important;
+}
+.sphere-shell.level-depth-map:after{
+  inset:18% auto auto 9%!important;
+  width:24px!important;
+  height:24px!important;
+  background:radial-gradient(circle at 32% 26%,#fff,#8ed7f2 34%,#1b719e 100%)!important;
+  box-shadow:0 9px 16px rgba(11,75,111,.18)!important;
+}
+.orbit-level{
+  overflow:visible!important;
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.95),
+    inset 0 -10px 22px rgba(57,142,181,.035)!important;
+}
+.orbit-level.active{
+  box-shadow:
+    inset 0 2px 0 #fff,
+    inset 0 -14px 28px rgba(27,126,171,.08),
+    0 10px 24px rgba(15,83,118,.08)!important;
+}
+.orbit-level>span{
+  z-index:12!important;
+  width:146px!important;
+  min-width:146px!important;
+  max-width:146px!important;
+  transform:translate(-50%,-50%)!important;
+  grid-template-columns:34px minmax(0,1fr)!important;
+  padding:8px 10px!important;
+  border-color:#a9d0e1!important;
+  background:rgba(255,255,255,.97)!important;
+  box-shadow:0 10px 20px rgba(11,74,108,.13)!important;
+}
+.orbit-level>span strong{
+  overflow:hidden!important;
+  color:#17384c!important;
+  font-size:.78rem!important;
+  white-space:nowrap!important;
+  text-overflow:ellipsis!important;
+}
+.orbit-level>span em{
+  overflow:hidden!important;
+  color:#607b89!important;
+  font-size:8px!important;
+  white-space:nowrap!important;
+  text-overflow:ellipsis!important;
+}
+.orbit-situation>span{left:50%!important;top:0!important}
+.orbit-strategy>span{left:94%!important;top:30%!important}
+.orbit-identity>span{left:14%!important;top:86%!important}
+.orbit-being>span{
+  left:50%!important;
+  top:50%!important;
+  width:122px!important;
+  min-width:122px!important;
+  max-width:122px!important;
+  grid-template-columns:30px minmax(0,1fr)!important;
+  padding:7px!important;
+  border-color:#1574a5!important;
+  background:linear-gradient(145deg,#fff,#e1f2f8)!important;
+  box-shadow:0 8px 0 rgba(12,84,121,.18),0 18px 28px rgba(8,61,91,.2)!important;
+}
+.orbit-being>span small{
+  width:30px!important;
+  height:30px!important;
+  background:#125f8b!important;
+}
+.orbit-being>span strong{font-size:.78rem!important}
+.orbit-being>span em{font-size:7px!important}
+.orbit-level.active>span{
+  border-color:#1471a2!important;
+  box-shadow:0 8px 0 rgba(20,113,162,.14),0 18px 30px rgba(8,61,91,.18)!important;
+}
+
+/* Decorative depth stays still and never captures interaction. */
+@media(prefers-reduced-motion:no-preference){
+  .sphere-shell.level-depth-map:before{animation:safeOrbFloat 6s ease-in-out infinite}
+  .sphere-shell.level-depth-map:after{animation:safeOrbFloat 8s -3s ease-in-out infinite}
+}
+@keyframes safeOrbFloat{0%,100%{translate:0 0}50%{translate:0 -6px}}
+@media(prefers-reduced-motion:reduce){
+  .sphere-shell.level-depth-map:before,
+  .sphere-shell.level-depth-map:after{animation:none!important}
+}
+@media(max-width:760px){
+  .orbit-level>span{
+    width:108px!important;
+    min-width:108px!important;
+    max-width:108px!important;
+    grid-template-columns:26px minmax(0,1fr)!important;
+    padding:5px 6px!important;
+  }
+  .orbit-level>span small{width:26px!important;height:26px!important}
+  .orbit-level>span strong{font-size:.62rem!important}
+  .orbit-level>span em{font-size:6px!important}
+  .orbit-strategy>span{left:90%!important;top:28%!important}
+  .orbit-identity>span{left:18%!important;top:88%!important}
+  .orbit-being>span{width:96px!important;min-width:96px!important;max-width:96px!important}
+  .sphere-shell.level-depth-map:before{width:38px!important;height:38px!important;right:3%!important}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#content">Перейти к содержанию</a>
