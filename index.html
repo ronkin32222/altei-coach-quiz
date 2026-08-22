@@ -676,6 +676,126 @@ body{background:#edf6fb}.screen{padding-top:104px;padding-bottom:104px}.hero-sta
   .benefits-grid article.benefit-step:not(:last-child):after{display:none!important}
 }
 </style>
+<style id="spacing-and-level-separation">
+/* One consistent vertical rhythm across the page. */
+.screen{padding-top:clamp(68px,7vw,104px)!important;padding-bottom:clamp(68px,7vw,104px)!important}
+.screen> .wrap>header,.result-head,.benefits-head,.audience-head{margin-bottom:clamp(28px,4vw,44px)!important}
+.screen h2{margin-bottom:clamp(20px,2.6vw,30px)!important}
+.result-section,.benefits-section,.final{min-height:0!important}
+.result-section{padding-top:clamp(64px,7vw,96px)!important;padding-bottom:clamp(64px,7vw,96px)!important}
+.sphere-level-section{padding-top:clamp(70px,7vw,100px)!important;padding-bottom:clamp(70px,7vw,100px)!important}
+.levels-intro{margin-bottom:38px!important}
+.benefits-grid{margin-top:36px!important}
+.benefits-summary{margin-top:36px!important}
+.levels-cta-simple{margin-top:28px!important}
+.final .zone{margin-top:26px!important}
+footer{padding-top:30px!important;padding-bottom:80px!important}
+p:last-child{margin-bottom:0}
+
+/* Clearly separated diagram and explanation columns. */
+.sphere-layout{
+  width:min(1120px,calc(100% - 48px))!important;
+  grid-template-columns:420px minmax(0,1fr)!important;
+  column-gap:72px!important;
+  align-items:start!important;
+  min-height:0!important;
+}
+.sphere-shell.level-depth-map{
+  position:sticky!important;
+  top:32px!important;
+  width:410px!important;
+  max-width:100%!important;
+  margin:26px 0 0!important;
+}
+.sphere-copy{
+  position:relative!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding-left:42px!important;
+  border-left:1px solid #b8d7e5!important;
+}
+.sphere-copy:before{
+  content:"Пояснения к уровням";
+  display:block;
+  margin:0 0 12px;
+  color:#1471a2;
+  font:700 11px/1 var(--g);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.level-story:after{margin-bottom:12px!important}
+
+/* Keep every map label inside its own visual zone. */
+.orbit-level>span{min-width:138px!important;max-width:148px!important}
+.orbit-situation>span{left:50%!important;top:1%!important}
+.orbit-strategy>span{left:82%!important;top:50%!important}
+.orbit-identity>span{left:50%!important;top:99%!important}
+.orbit-being>span{left:50%!important;top:50%!important}
+.orbit-level>span strong{font-size:.82rem!important}
+.orbit-level>span em{font-size:9px!important}
+
+/* Remove legacy duplicate controls and keep one clear disclosure label. */
+.level-story-card:after,
+.level-story-card:not(:last-child):after,
+.level-story-card.active:after{content:none!important;display:none!important}
+.level-story-card div:after{
+  content:"Читать дальше  ↓"!important;
+  right:18px!important;
+  top:22px!important;
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:none!important;
+  box-shadow:none!important;
+  color:#1471a2!important;
+  font:600 11px/1 var(--g)!important;
+}
+.level-story-card.active div:after{content:"Свернуть  ↑"!important}
+.level-story-card h3,.level-story-card.active h3{margin-right:118px!important}
+.level-story-card{overflow:hidden!important}
+.level-story-card.active{overflow:visible!important}
+
+/* Avoid another oversized action immediately after the explanation. */
+.levels-cta-simple{
+  width:min(720px,calc(100% - 48px))!important;
+  padding:15px 17px!important;
+}
+.levels-cta-simple .cta{
+  min-width:190px!important;
+  max-width:220px!important;
+  min-height:46px!important;
+  font-size:11px!important;
+}
+.levels-cta-simple .levels-cta-copy span{font-size:10px!important}
+.levels-cta-simple .levels-cta-copy p{font-size:.92rem!important;margin-bottom:0!important}
+
+@media(max-width:980px){
+  .sphere-layout{grid-template-columns:1fr!important;gap:46px!important}
+  .sphere-shell.level-depth-map{position:relative!important;top:auto!important;width:min(410px,calc(100vw - 72px))!important;margin:10px auto 24px!important}
+  .sphere-copy{max-width:680px!important;margin:auto!important;padding:32px 0 0!important;border-left:0!important;border-top:1px solid #b8d7e5!important}
+  .sphere-copy:before{text-align:center!important}
+  .level-story:after{text-align:center!important}
+}
+@media(max-width:760px){
+  .screen{padding-top:58px!important;padding-bottom:58px!important}
+  .sphere-level-section{padding-top:60px!important;padding-bottom:66px!important}
+  .sphere-layout{width:calc(100% - 32px)!important;gap:34px!important}
+  .sphere-shell.level-depth-map{width:min(300px,calc(100vw - 58px))!important}
+  .orbit-level>span{min-width:104px!important;max-width:112px!important}
+  .orbit-level>span strong{font-size:.66rem!important}
+  .orbit-level>span em{font-size:7px!important}
+  .orbit-strategy>span{left:80%!important}
+  .sphere-copy{padding-top:26px!important}
+  .level-story-card h3,.level-story-card.active h3{margin-right:0!important}
+  .level-story-card div:after{position:static!important;margin-top:8px!important}
+  .levels-cta-simple{width:calc(100% - 32px)!important}
+  footer{padding-bottom:64px!important}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#content">Перейти к содержанию</a>
