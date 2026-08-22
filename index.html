@@ -171,7 +171,40 @@ body{background:#edf6fb}.screen{padding-top:104px;padding-bottom:104px}.hero-sta
 .levels-cta-simple .tg-mark{width:40px!important;height:40px!important;flex-basis:40px!important;border-radius:11px!important}
 .levels-cta-simple .tg-mark svg{width:21px!important;height:21px!important}
 @media(max-width:900px){.levels-cta-simple{width:min(620px,calc(100% - 32px))!important;grid-template-columns:1fr!important;gap:12px!important}}
-@media(max-width:760px){.levels-cta-simple{width:calc(100% - 28px)!important;margin-top:16px!important;padding:13px!important;border-radius:16px!important}.levels-cta-copy p{font-size:.94rem!important}.levels-cta-simple .cta{min-height:50px!important;font-size:12px!important}}</style>
+@media(max-width:760px){.levels-cta-simple{width:calc(100% - 28px)!important;margin-top:16px!important;padding:13px!important;border-radius:16px!important}.levels-cta-copy p{font-size:.94rem!important}.levels-cta-simple .cta{min-height:50px!important;font-size:12px!important}}/* Clear level map on tablet and mobile */
+@media(max-width:900px){
+  .sphere-level-section{overflow:hidden!important}
+  .levels-intro{margin-bottom:26px!important}
+  .levels-intro h2{font-size:clamp(2.45rem,8vw,3.8rem)!important;line-height:1.02!important;overflow:visible!important}
+  .sphere-layout{grid-template-columns:1fr!important;gap:34px!important;min-height:0!important;padding-left:0!important}
+  .sphere-shell{width:min(520px,calc(100vw - 64px))!important;max-width:100%!important;margin:0 auto!important}
+  .sphere-copy{width:100%!important;max-width:620px!important;margin:0 auto!important}
+  .depth-note{left:2%!important}
+}
+@media(max-width:520px){
+  .levels-intro h2{font-size:clamp(2.25rem,11vw,3rem)!important}
+  .sphere-shell{width:min(342px,calc(100vw - 48px))!important}
+  .orbit-level>span{min-width:126px!important;padding:8px 10px!important}
+  .orbit-level strong{font-size:.96rem!important}
+  .orbit-level em{font-size:.68rem!important}
+  .orbit-level small{width:35px!important;height:35px!important;flex-basis:35px!important}
+  .orbit-situation>span{translate:0 -2px!important}
+  .orbit-strategy>span{translate:-4px 0!important}
+  .orbit-identity>span{translate:0 3px!important}
+  .depth-note{left:0!important;scale:.78;transform-origin:left center}
+  .level-figure{opacity:.46!important}
+}.orbit-being small{display:grid!important;position:absolute!important;left:50%!important;top:7px!important;translate:-50% 0!important;width:30px!important;height:24px!important;place-items:center!important;border-radius:8px!important;background:#0b6fae!important;color:#fff!important;font:700 10px/1 var(--g)!important;box-shadow:0 3px 0 #06456e!important}
+.orbit-being>span{padding-top:37px!important}
+@media(max-width:520px){.orbit-being small{top:5px!important;width:27px!important;height:21px!important}.orbit-being>span{padding-top:30px!important;padding-bottom:7px!important}}@media(max-width:520px){
+  .orbit-level>span{min-width:0!important;width:max-content!important;max-width:145px!important;padding:6px 8px!important;gap:7px!important}
+  .orbit-level em{display:none!important}
+  .orbit-level strong{font-size:.9rem!important;line-height:1!important}
+  .orbit-level small{width:31px!important;height:31px!important;flex-basis:31px!important}
+  .orbit-strategy>span{translate:10px 0!important}
+  .orbit-identity>span{translate:0 9px!important}
+  .orbit-being>span{width:96px!important;min-height:70px!important;padding:34px 7px 7px!important;justify-content:flex-end!important}
+  .orbit-being small{top:6px!important}
+}</style>
 </head>
 <body>
 <a class="skip" href="#content">Перейти к содержанию</a>
