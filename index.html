@@ -1209,11 +1209,168 @@ main>section+section{margin-top:0!important}
   .final{padding-top:38px!important;padding-bottom:46px!important}
 }
 </style>
+<style id="level-map-structure-v5">
+/* No abstract preface: title goes directly into the four-level model. */
+.levels-intro{max-width:1120px!important;margin-bottom:22px!important}
+.levels-context{display:none!important}
+.sphere-layout{
+  grid-template-columns:440px minmax(0,1fr)!important;
+  column-gap:150px!important;
+  align-items:start!important;
+  padding-top:72px!important;
+}
+.sphere-shell.level-depth-map{
+  position:relative!important;
+  top:auto!important;
+  width:420px!important;
+  margin:0!important;
+  overflow:visible!important;
+  background:
+    radial-gradient(circle at center,
+      rgba(22,120,168,.15) 0 13%,
+      transparent 13.5% 24%,
+      rgba(22,120,168,.08) 24.5% 25%,
+      transparent 25.5% 38%,
+      rgba(22,120,168,.08) 38.5% 39%,
+      transparent 39.5% 53%,
+      rgba(22,120,168,.1) 53.5% 54%,
+      #f9fcfe 54.5% 100%)!important;
+  border:1px solid #9ecadd!important;
+  box-shadow:inset 0 0 42px rgba(32,122,165,.09),0 26px 56px rgba(10,64,94,.1)!important;
+}
+.sphere-shell.level-depth-map:before{
+  content:"ГЛУБЖЕ"!important;
+  position:absolute!important;
+  display:grid!important;
+  place-items:center!important;
+  left:50%!important;
+  top:50%!important;
+  right:auto!important;
+  bottom:auto!important;
+  width:92px!important;
+  height:92px!important;
+  translate:-50% -50%!important;
+  border:1px solid #0f6f9f!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle at 34% 28%,#e9f9ff,#72c5e8 38%,#176f9d 100%)!important;
+  color:#fff!important;
+  box-shadow:inset 9px 9px 15px rgba(255,255,255,.36),inset -10px -12px 18px rgba(4,47,73,.3),0 14px 26px rgba(5,61,91,.2)!important;
+  font:700 10px/1 var(--g)!important;
+  letter-spacing:.12em!important;
+  pointer-events:none!important;
+}
+.sphere-shell.level-depth-map:after{display:none!important}
+
+/* Buttons are clear labels around the model, not nested circles. */
+.orbit-level,
+.orbit-situation,.orbit-strategy,.orbit-identity,.orbit-being{
+  position:absolute!important;
+  inset:auto!important;
+  z-index:15!important;
+  display:block!important;
+  width:132px!important;
+  height:auto!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:none!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+.orbit-situation{left:0!important;top:-64px!important}
+.orbit-strategy{left:50%!important;top:-64px!important;translate:-50% 0!important}
+.orbit-identity{right:0!important;top:-64px!important}
+.orbit-being{left:calc(100% + 18px)!important;top:50%!important;translate:0 -50%!important}
+.orbit-level>span,
+.orbit-being>span{
+  position:relative!important;
+  inset:auto!important;
+  display:grid!important;
+  grid-template-columns:30px minmax(0,1fr)!important;
+  grid-template-rows:auto auto!important;
+  gap:1px 7px!important;
+  width:132px!important;
+  min-width:132px!important;
+  max-width:132px!important;
+  padding:8px!important;
+  transform:none!important;
+  translate:none!important;
+  border:1px solid #b0d3e2!important;
+  border-radius:11px!important;
+  background:#fffffff2!important;
+  box-shadow:0 8px 17px rgba(11,70,102,.1)!important;
+  text-align:left!important;
+}
+.orbit-level>span small,.orbit-being>span small{
+  grid-row:1/3!important;
+  display:grid!important;
+  place-items:center!important;
+  width:30px!important;
+  height:30px!important;
+  border-radius:8px!important;
+  background:#dceef6!important;
+  color:#126d9c!important;
+  font:700 10px/1 var(--g)!important;
+}
+.orbit-level>span strong,.orbit-being>span strong{
+  overflow:visible!important;
+  color:#17384c!important;
+  font:500 .72rem/1.1 var(--s)!important;
+  white-space:nowrap!important;
+}
+.orbit-level>span em,.orbit-being>span em{
+  overflow:visible!important;
+  color:#667e8a!important;
+  font:400 7px/1.15 var(--g)!important;
+  white-space:nowrap!important;
+}
+.orbit-level.active>span{
+  border-color:#1471a2!important;
+  background:#fff!important;
+  box-shadow:0 5px 0 rgba(20,113,162,.16),0 12px 22px rgba(8,61,91,.15)!important;
+}
+.orbit-level.active>span small{background:#1471a2!important;color:#fff!important}
+
+/* Explanations remain a visibly separate reading column. */
+.sphere-copy{
+  padding-left:34px!important;
+  border-left:1px solid #b8d7e5!important;
+}
+.sphere-copy:before{margin-bottom:10px!important}
+.level-story:after{margin-bottom:10px!important}
+.level-story-card,.level-story-card:not(.active),.level-story-card.active{padding-top:14px!important;padding-bottom:14px!important}
+.level-story-card.active{padding-top:18px!important;padding-bottom:18px!important}
+
+@media(max-width:1080px){
+  .sphere-layout{grid-template-columns:1fr!important;gap:48px!important;padding-top:70px!important}
+  .sphere-shell.level-depth-map{width:min(420px,calc(100vw - 80px))!important;margin:0 auto!important}
+  .orbit-being{left:auto!important;right:-12px!important;top:calc(100% + 18px)!important;translate:0!important}
+  .sphere-copy{max-width:680px!important;margin:34px auto 0!important;padding:28px 0 0!important;border-left:0!important;border-top:1px solid #b8d7e5!important}
+}
+@media(max-width:760px){
+  .levels-intro{margin-bottom:16px!important}
+  .sphere-layout{padding-top:104px!important}
+  .sphere-shell.level-depth-map{width:min(286px,calc(100vw - 58px))!important}
+  .orbit-level,.orbit-situation,.orbit-strategy,.orbit-identity,.orbit-being{width:96px!important}
+  .orbit-level>span,.orbit-being>span{width:96px!important;min-width:96px!important;max-width:96px!important;grid-template-columns:24px minmax(0,1fr)!important;padding:5px!important;gap:0 4px!important}
+  .orbit-level>span small,.orbit-being>span small{width:24px!important;height:24px!important;font-size:8px!important}
+  .orbit-level>span strong,.orbit-being>span strong{font-size:.56rem!important}
+  .orbit-level>span em,.orbit-being>span em{font-size:5px!important}
+  .orbit-situation{top:-92px!important}
+  .orbit-strategy{top:-48px!important}
+  .orbit-identity{top:-92px!important}
+  .orbit-being{right:-4px!important;top:calc(100% + 12px)!important}
+  .sphere-shell.level-depth-map:before{width:70px!important;height:70px!important;font-size:8px!important}
+  .sphere-copy{margin-top:44px!important}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#content">Перейти к содержанию</a>
 <main id="content"><section class="hero"><div class="wrap hero-stage"><div class="hero-in" data-reveal><div class="brand glass-chip">Диагностика практики от Елены Милешко – практикующего коуча с опытом более 8 лет, автора онтологического подхода в коучинге и программы профессиональной переподготовки специалистов</div><h1 id="hero-title"><span class="hero-line">На каком уровне вы</span><span class="hero-line long">создаете изменения</span><span class="hero-line long">в работе с клиентами?</span></h1><p class="lead glass-phrase">5 вопросов, 2 минуты — и вы увидите, на каком уровне сегодня строится ваша практика и какие профессиональные результаты закономерно возникают на этом уровне.</p><div class="zone"><a class="cta" data-source="hero" href="https://t.me/testaletheia_academy_bot"><span>УЗНАТЬ СВОЙ УРОВЕНЬ РАБОТЫ В TELEGRAM</span><span class="tg-mark" aria-hidden="true">➤</span></a><p class="micro glass-micro">Тест займет 2 минуты. В конце – персональный разбор, главный ограничитель роста вашей практики и следующий шаг профессионального развития.</p></div></div><div class="hero-portrait" data-reveal><img class="hero-photo" src="assets/elena-mileshko.jpg" alt="Елена Милешко, автор теста"></div><aside class="hero-hud" aria-label="Четыре уровня работы специалиста"><div class="hud-card"><div class="hud-top"><span>01</span><span class="hud-dot"></span></div><div class="hud-level">Ситуации</div><div class="hud-line" style="--fill:100%"></div></div><div class="hud-card"><div class="hud-top"><span>02</span><span class="hud-dot"></span></div><div class="hud-level">Стратегии</div><div class="hud-line" style="--fill:76%"></div></div><div class="hud-card"><div class="hud-top"><span>03</span><span class="hud-dot"></span></div><div class="hud-level">Идентичность</div><div class="hud-line" style="--fill:52%"></div></div><div class="hud-card"><div class="hud-top"><span>04</span><span class="hud-dot"></span></div><div class="hud-level">Бытие</div><div class="hud-line" style="--fill:28%"></div></div></aside><div class="tg-orb" aria-hidden="true"></div></div></section>
-<section class="screen result-section"><div class="wrap"><header class="result-head" data-reveal><div class="eye">Ваш результат</div><h2>После прохождения вы получите:</h2></header><div class="result-board" data-reveal><ul class="result-list"><li>персональный разбор своей практики;</li><li>сильные стороны вашего текущего подхода;</li><li>главный фактор, который сегодня ограничивает профессиональный рост;</li><li>рекомендации по переходу на следующий уровень мастерства.</li></ul></div></div></section><section class="level-stream-section sphere-level-section" id="levels"><div class="wrap levels-intro" data-reveal><div class="eye">Четыре уровня работы</div><h2>4 уровня работы специалиста</h2><div class="levels-context"><p>В современной помогающей практике изменения создаются на разных уровнях. Каждый уровень работы помогает клиенту по-своему.</p><p>В практике можно работать на разных уровнях. Это не вопрос "лучше" или "хуже". Каждый из них решает свои задачи и имеет свои границы.</p><p>Большинство специалистов интуитивно смешивают эти уровни, не замечая, какой из них становится основой их практики. Именно это и показывает диагностика.</p></div></div><div class="wrap sphere-layout"><div class="sphere-shell level-depth-map" id="level-sphere" role="group" aria-label="Интерактивная карта четырёх уровней работы"><div class="sphere-cloud" aria-hidden="true"></div><div class="depth-note" aria-hidden="true"><span>Увеличивается<br>глубина работы</span><svg viewBox="0 0 180 92"><path d="M8 18C48 13 66 31 91 49C111 64 133 67 159 59"/><path d="m149 51 13 8-12 9"/></svg></div><div class="level-figures" aria-hidden="true"><span class="level-figure figure-situation"><i></i><b></b><u></u></span><span class="level-figure figure-strategy"><i></i><b></b><u></u></span><span class="level-figure figure-identity"><i></i><b></b><u></u></span><span class="level-figure figure-being"><i></i><b></b><u></u></span></div><button class="orbit-level orbit-situation active" type="button" data-level-index="0"><span><small>01</small><strong>Ситуации</strong><em>Решение задач</em></span></button><button class="orbit-level orbit-strategy" type="button" data-level-index="1"><span><small>02</small><strong>Стратегии</strong><em>Планы и действия</em></span></button><button class="orbit-level orbit-identity" type="button" data-level-index="2"><span><small>03</small><strong>Идентичность</strong><em>Новые роли</em></span></button><button class="orbit-level orbit-being" type="button" data-level-index="3"><span><small>04</small><strong>Бытие</strong><em>Онтология</em></span></button></div><div class="sphere-copy" data-reveal><div class="level-story"><article class="level-story-card active" data-level-index="0" tabindex="0"><span>01</span><div><h3>Ситуации <small>(Решение задач)</small></h3><p>Клиент обращается, когда сам не справляется с конкретной проблемой: конфликт, выбор, кризисная задача. Специалист выступает в роли помощника, тушащего «пожары».</p><p>Хорошо помогает в решении конкретных задач. Однако если источник возникновения ситуации остается прежним, похожие запросы могут возвращаться.</p></div></article><article class="level-story-card" data-level-index="1" tabindex="0"><span>02</span><div><h3>Стратегии <small>(Планы и действия)</small></h3><p>Клиент приходит за планом, мотивацией и дисциплиной. Специалист помогает выстроить пошаговый маршрут, становясь «внешней опорой» или тренером.</p><p>Если причины сопротивления лежат глубже уровня действий, даже хороший план может не реализоваться. Не из-за лени, а потому что сама воля к действию рождается из того же источника, который создает проблему.</p></div></article><article class="level-story-card" data-level-index="2" tabindex="0"><span>03</span><div><h3>Идентичность <small>(Новые роли)</small></h3><p>Работа направлена на расширение восприятия: увидеть ситуацию чужими глазами, примерить новую роль, сменить убеждения. Дает мощные инсайты.</p><p>Само понимание себя еще не гарантирует, что новый способ жить станет естественным. Осознания могут оставаться на уровне интеллектуального опыта, не переходя в устойчивые изменения. Рефлексия часто становится формой побега от реальных действий.</p></div></article><article class="level-story-card" data-level-index="3" tabindex="0"><span>04</span><div><h3>Бытие <small>(Онтология)</small></h3><p>Работа ведется с первоисточником — конфигурацией, из которой рождаются мысли, роли и стратегии человека. Специалист работает не со следствиями, а с самой структурой, откуда они возникают.</p><p>Работа через форму бытия  позволяет клиенту перестроить сам способ жить, вернуть его в подлинное состояние. И тогда новые способы жить становятся естественными, а изменения приобретают устойчивость.</p></div></article></div></div></div><div class="wrap levels-cta-simple" data-reveal><div class="levels-cta-copy"><span>5 вопросов · 2 минуты</span><p>Узнайте, на каком из четырёх уровней строится ваша практика.</p></div><a class="cta" data-source="levels" href="https://t.me/testaletheia_academy_bot"><span>Определить уровень своей практики</span><span class="tg-mark" aria-hidden="true">➤</span></a></div></section><section class="screen benefits-section"><div class="wrap"><header class="benefits-head" data-reveal><div class="eye">🟢 Преимущества онтологического уровня · Работа на 4 уровне</div><h2>Как обычно меняется практика, когда специалист начинает работать глубже</h2><p>По мере перехода на более глубокий уровень работы меняются не только методики, но и весь фундамент вашей практики, и как следствие – результаты клиентов и изменение вашей собственной реализации.</p><div class="benefits-sculpture" aria-hidden="true"><i class="core"></i><i class="step"></i><i class="step"></i></div></header><div class="benefits-grid"><article class="benefit-step" data-reveal><span>01</span><button class="benefit-toggle" type="button" aria-expanded="false"><strong>Появляются устойчивые результаты.</strong><small>Читать дальше</small></button><div class="benefit-detail"><p>Клиент меняет сам источник своих решений. Ему становятся доступны результаты, которые не удавалось получить, сколько бы он ни менял стратегии и действия.</p></div></article><article class="benefit-step" data-reveal><span>02</span><button class="benefit-toggle" type="button" aria-expanded="false"><strong>Клиент меньше зависит от специалиста.</strong><small>Читать дальше</small></button><div class="benefit-detail"><p>Вы больше не выполняете роль внешней опоры или мотиватора — клиент двигается из собственного состояния, без постоянной вашей подпитки.</p></div></article><article class="benefit-step" data-reveal><span>03</span><button class="benefit-toggle" type="button" aria-expanded="false"><strong>Меняется ценность вашей работы.</strong><small>Читать дальше</small></button><div class="benefit-detail"><p>Клиенты видят разницу между разовым решением и настоящей трансформацией — и готовы платить больше за такие изменения.</p></div></article><article class="benefit-step" data-reveal><span>04</span><button class="benefit-toggle" type="button" aria-expanded="false"><strong>Увеличивается сарафанное радио.</strong><small>Читать дальше</small></button><div class="benefit-detail"><p>Когда люди получают не просто короткие инсайты, а реальную трансформацию жизни, они активно рекомендуют вас как помогающего практика.</p></div></article><article class="benefit-step" data-reveal><span>05</span><button class="benefit-toggle" type="button" aria-expanded="false"><strong>Вы выходите из конкуренции техник.</strong><small>Читать дальше</small></button><div class="benefit-detail"><p>Вы перестаете соревноваться набором сертификатов и методик. Главным инструментом метода становится ваша подлинность и глубина.</p></div></article></div><div class="benefits-summary" data-reveal><p>Эти изменения не возникают автоматически после изучения новой техники или метода. Они появляются тогда, когда меняется уровень, с которого сам специалист создает изменения.</p><p>Именно поэтому бывает трудно объективно оценить собственную практику изнутри.</p><p>Диагностика помогает увидеть, какой уровень сегодня действительно лежит в основе вашей работы и что закономерно становится следующим профессиональным шагом.</p><svg class="benefits-invite-svg" aria-hidden="true" viewBox="0 0 300 360"><defs><linearGradient id="giftBody" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#58cff7"/><stop offset=".55" stop-color="#0879b7"/><stop offset="1" stop-color="#043455"/></linearGradient><linearGradient id="giftLight" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#a7e6fa"/></linearGradient><radialGradient id="faceOrb" cx="30%" cy="22%"><stop stop-color="#ffffff"/><stop offset=".25" stop-color="#80ddfa"/><stop offset=".68" stop-color="#1384bc"/><stop offset="1" stop-color="#043b60"/></radialGradient><filter id="softShadow"><feDropShadow dx="0" dy="18" stdDeviation="12" flood-color="#001522" flood-opacity=".55"/></filter></defs><g filter="url(#softShadow)"><g transform="translate(76 88) rotate(-6 78 75)"><rect x="12" y="38" width="152" height="124" rx="22" fill="url(#giftBody)"/><rect x="74" y="38" width="28" height="124" fill="url(#giftLight)" opacity=".95"/><rect x="2" y="25" width="172" height="35" rx="15" fill="url(#giftLight)"/><path d="M88 27C52-4 35 5 47 28c10 18 41 7 41 7s31 11 41-7C141 5 124-4 88 27Z" fill="#eafaff" stroke="#7fcde9" stroke-width="3"/></g><g fill="url(#giftLight)" stroke="#fff" stroke-width="2"><rect x="54" y="70" width="50" height="64" rx="12" transform="rotate(-18 54 70)"/><rect x="184" y="55" width="50" height="64" rx="12" transform="rotate(15 184 55)"/><rect x="100" y="24" width="50" height="64" rx="12" transform="rotate(-7 100 24)"/><rect x="158" y="12" width="50" height="64" rx="12" transform="rotate(8 158 12)"/></g><g class="gift-card-labels" fill="#0875b3" font-family="Golos Text, sans-serif" font-size="15" font-weight="700" text-anchor="middle"><text x="79" y="103">01</text><text x="211" y="90">02</text><text x="125" y="58">03</text><text x="184" y="47">04</text></g><circle cx="235" cy="266" r="42" fill="url(#faceOrb)"/><circle cx="220" cy="258" r="4" fill="#fff"/><circle cx="249" cy="258" r="4" fill="#fff"/><path d="M219 277q16 14 32 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g><path d="M255 225C225 194 184 217 167 252c-13 27-39 42-84 38" fill="none" stroke="#91e1ff" stroke-width="5" stroke-linecap="round" stroke-dasharray="7 10"/><path d="m72 290 22-10-6 22Z" fill="#91e1ff"/></svg><a class="cta" data-source="benefits" href="https://t.me/testaletheia_academy_bot"><span>Определить уровень своей практики</span><span class="tg-mark" aria-hidden="true">➤</span></a><p class="micro">5 вопросов, 2 минуты — персональный разбор вашей практики покажет, насколько близко вы уже подошли к этому уровню и что сегодня является вашим следующим шагом.</p></div></div></section>
+<section class="screen result-section"><div class="wrap"><header class="result-head" data-reveal><div class="eye">Ваш результат</div><h2>После прохождения вы получите:</h2></header><div class="result-board" data-reveal><ul class="result-list"><li>персональный разбор своей практики;</li><li>сильные стороны вашего текущего подхода;</li><li>главный фактор, который сегодня ограничивает профессиональный рост;</li><li>рекомендации по переходу на следующий уровень мастерства.</li></ul></div></div></section><section class="level-stream-section sphere-level-section" id="levels"><div class="wrap levels-intro" data-reveal><div class="eye">Четыре уровня работы</div><h2>4 уровня работы специалиста</h2></div><div class="wrap sphere-layout"><div class="sphere-shell level-depth-map" id="level-sphere" role="group" aria-label="Интерактивная карта четырёх уровней работы"><div class="sphere-cloud" aria-hidden="true"></div><div class="depth-note" aria-hidden="true"><span>Увеличивается<br>глубина работы</span><svg viewBox="0 0 180 92"><path d="M8 18C48 13 66 31 91 49C111 64 133 67 159 59"/><path d="m149 51 13 8-12 9"/></svg></div><div class="level-figures" aria-hidden="true"><span class="level-figure figure-situation"><i></i><b></b><u></u></span><span class="level-figure figure-strategy"><i></i><b></b><u></u></span><span class="level-figure figure-identity"><i></i><b></b><u></u></span><span class="level-figure figure-being"><i></i><b></b><u></u></span></div><button class="orbit-level orbit-situation active" type="button" data-level-index="0"><span><small>01</small><strong>Ситуации</strong><em>Решение задач</em></span></button><button class="orbit-level orbit-strategy" type="button" data-level-index="1"><span><small>02</small><strong>Стратегии</strong><em>Планы и действия</em></span></button><button class="orbit-level orbit-identity" type="button" data-level-index="2"><span><small>03</small><strong>Идентичность</strong><em>Новые роли</em></span></button><button class="orbit-level orbit-being" type="button" data-level-index="3"><span><small>04</small><strong>Бытие</strong><em>Онтология</em></span></button></div><div class="sphere-copy" data-reveal><div class="level-story"><article class="level-story-card active" data-level-index="0" tabindex="0"><span>01</span><div><h3>Ситуации <small>(Решение задач)</small></h3><p>Клиент обращается, когда сам не справляется с конкретной проблемой: конфликт, выбор, кризисная задача. Специалист выступает в роли помощника, тушащего «пожары».</p><p>Хорошо помогает в решении конкретных задач. Однако если источник возникновения ситуации остается прежним, похожие запросы могут возвращаться.</p></div></article><article class="level-story-card" data-level-index="1" tabindex="0"><span>02</span><div><h3>Стратегии <small>(Планы и действия)</small></h3><p>Клиент приходит за планом, мотивацией и дисциплиной. Специалист помогает выстроить пошаговый маршрут, становясь «внешней опорой» или тренером.</p><p>Если причины сопротивления лежат глубже уровня действий, даже хороший план может не реализоваться. Не из-за лени, а потому что сама воля к действию рождается из того же источника, который создает проблему.</p></div></article><article class="level-story-card" data-level-index="2" tabindex="0"><span>03</span><div><h3>Идентичность <small>(Новые роли)</small></h3><p>Работа направлена на расширение восприятия: увидеть ситуацию чужими глазами, примерить новую роль, сменить убеждения. Дает мощные инсайты.</p><p>Само понимание себя еще не гарантирует, что новый способ жить станет естественным. Осознания могут оставаться на уровне интеллектуального опыта, не переходя в устойчивые изменения. Рефлексия часто становится формой побега от реальных действий.</p></div></article><article class="level-story-card" data-level-index="3" tabindex="0"><span>04</span><div><h3>Бытие <small>(Онтология)</small></h3><p>Работа ведется с первоисточником — конфигурацией, из которой рождаются мысли, роли и стратегии человека. Специалист работает не со следствиями, а с самой структурой, откуда они возникают.</p><p>Работа через форму бытия  позволяет клиенту перестроить сам способ жить, вернуть его в подлинное состояние. И тогда новые способы жить становятся естественными, а изменения приобретают устойчивость.</p></div></article></div></div></div><div class="wrap levels-cta-simple" data-reveal><div class="levels-cta-copy"><span>5 вопросов · 2 минуты</span><p>Узнайте, на каком из четырёх уровней строится ваша практика.</p></div><a class="cta" data-source="levels" href="https://t.me/testaletheia_academy_bot"><span>Определить уровень своей практики</span><span class="tg-mark" aria-hidden="true">➤</span></a></div></section><section class="screen benefits-section"><div class="wrap"><header class="benefits-head" data-reveal><div class="eye">🟢 Преимущества онтологического уровня · Работа на 4 уровне</div><h2>Как обычно меняется практика, когда специалист начинает работать глубже</h2><p>По мере перехода на более глубокий уровень работы меняются не только методики, но и весь фундамент вашей практики, и как следствие – результаты клиентов и изменение вашей собственной реализации.</p><div class="benefits-sculpture" aria-hidden="true"><i class="core"></i><i class="step"></i><i class="step"></i></div></header><div class="benefits-grid"><article class="benefit-step" data-reveal><span>01</span><button class="benefit-toggle" type="button" aria-expanded="false"><strong>Появляются устойчивые результаты.</strong><small>Читать дальше</small></button><div class="benefit-detail"><p>Клиент меняет сам источник своих решений. Ему становятся доступны результаты, которые не удавалось получить, сколько бы он ни менял стратегии и действия.</p></div></article><article class="benefit-step" data-reveal><span>02</span><button class="benefit-toggle" type="button" aria-expanded="false"><strong>Клиент меньше зависит от специалиста.</strong><small>Читать дальше</small></button><div class="benefit-detail"><p>Вы больше не выполняете роль внешней опоры или мотиватора — клиент двигается из собственного состояния, без постоянной вашей подпитки.</p></div></article><article class="benefit-step" data-reveal><span>03</span><button class="benefit-toggle" type="button" aria-expanded="false"><strong>Меняется ценность вашей работы.</strong><small>Читать дальше</small></button><div class="benefit-detail"><p>Клиенты видят разницу между разовым решением и настоящей трансформацией — и готовы платить больше за такие изменения.</p></div></article><article class="benefit-step" data-reveal><span>04</span><button class="benefit-toggle" type="button" aria-expanded="false"><strong>Увеличивается сарафанное радио.</strong><small>Читать дальше</small></button><div class="benefit-detail"><p>Когда люди получают не просто короткие инсайты, а реальную трансформацию жизни, они активно рекомендуют вас как помогающего практика.</p></div></article><article class="benefit-step" data-reveal><span>05</span><button class="benefit-toggle" type="button" aria-expanded="false"><strong>Вы выходите из конкуренции техник.</strong><small>Читать дальше</small></button><div class="benefit-detail"><p>Вы перестаете соревноваться набором сертификатов и методик. Главным инструментом метода становится ваша подлинность и глубина.</p></div></article></div><div class="benefits-summary" data-reveal><p>Эти изменения не возникают автоматически после изучения новой техники или метода. Они появляются тогда, когда меняется уровень, с которого сам специалист создает изменения.</p><p>Именно поэтому бывает трудно объективно оценить собственную практику изнутри.</p><p>Диагностика помогает увидеть, какой уровень сегодня действительно лежит в основе вашей работы и что закономерно становится следующим профессиональным шагом.</p><svg class="benefits-invite-svg" aria-hidden="true" viewBox="0 0 300 360"><defs><linearGradient id="giftBody" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#58cff7"/><stop offset=".55" stop-color="#0879b7"/><stop offset="1" stop-color="#043455"/></linearGradient><linearGradient id="giftLight" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#a7e6fa"/></linearGradient><radialGradient id="faceOrb" cx="30%" cy="22%"><stop stop-color="#ffffff"/><stop offset=".25" stop-color="#80ddfa"/><stop offset=".68" stop-color="#1384bc"/><stop offset="1" stop-color="#043b60"/></radialGradient><filter id="softShadow"><feDropShadow dx="0" dy="18" stdDeviation="12" flood-color="#001522" flood-opacity=".55"/></filter></defs><g filter="url(#softShadow)"><g transform="translate(76 88) rotate(-6 78 75)"><rect x="12" y="38" width="152" height="124" rx="22" fill="url(#giftBody)"/><rect x="74" y="38" width="28" height="124" fill="url(#giftLight)" opacity=".95"/><rect x="2" y="25" width="172" height="35" rx="15" fill="url(#giftLight)"/><path d="M88 27C52-4 35 5 47 28c10 18 41 7 41 7s31 11 41-7C141 5 124-4 88 27Z" fill="#eafaff" stroke="#7fcde9" stroke-width="3"/></g><g fill="url(#giftLight)" stroke="#fff" stroke-width="2"><rect x="54" y="70" width="50" height="64" rx="12" transform="rotate(-18 54 70)"/><rect x="184" y="55" width="50" height="64" rx="12" transform="rotate(15 184 55)"/><rect x="100" y="24" width="50" height="64" rx="12" transform="rotate(-7 100 24)"/><rect x="158" y="12" width="50" height="64" rx="12" transform="rotate(8 158 12)"/></g><g class="gift-card-labels" fill="#0875b3" font-family="Golos Text, sans-serif" font-size="15" font-weight="700" text-anchor="middle"><text x="79" y="103">01</text><text x="211" y="90">02</text><text x="125" y="58">03</text><text x="184" y="47">04</text></g><circle cx="235" cy="266" r="42" fill="url(#faceOrb)"/><circle cx="220" cy="258" r="4" fill="#fff"/><circle cx="249" cy="258" r="4" fill="#fff"/><path d="M219 277q16 14 32 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g><path d="M255 225C225 194 184 217 167 252c-13 27-39 42-84 38" fill="none" stroke="#91e1ff" stroke-width="5" stroke-linecap="round" stroke-dasharray="7 10"/><path d="m72 290 22-10-6 22Z" fill="#91e1ff"/></svg><a class="cta" data-source="benefits" href="https://t.me/testaletheia_academy_bot"><span>Определить уровень своей практики</span><span class="tg-mark" aria-hidden="true">➤</span></a><p class="micro">5 вопросов, 2 минуты — персональный разбор вашей практики покажет, насколько близко вы уже подошли к этому уровню и что сегодня является вашим следующим шагом.</p></div></div></section>
 <section class="screen final"><div class="wrap"><div class="copy" data-reveal><div class="eye">Диагностика практики</div><h2>Откройте следующий шаг <span class="mark-ink">профессионального роста</span></h2><p class="lead">Ответьте на 5 вопросов и откройте следующий шаг профессионального роста прямо сейчас.</p><div class="zone"><a class="cta" data-source="final" href="https://t.me/testaletheia_academy_bot"><span>ПРОЙТИ ДИАГНОСТИКУ ПРАКТИКИ В TELEGRAM</span><span class="tg-mark" aria-hidden="true">➤</span></a></div></div></div></section></main>
 <footer><div class="wrap foot"><span>Академия «Алетейя», 2026</span><nav class="legal" aria-label="Юридическая информация"><a href="legal.html#privacy">Политика конфиденциальности</a><a href="legal.html#offer">Оферта</a></nav></div></footer>
 <script>
