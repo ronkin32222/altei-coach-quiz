@@ -77,3 +77,26 @@ benefitItems.forEach((item) => {
 
 document.querySelector(`.hero__visual`)?.setAttribute(`role`, `group`);
 document.querySelector(`.level-map`)?.setAttribute(`role`, `group`);
+
+const audienceItems = [...document.querySelectorAll(".audience-item")];
+
+audienceItems.forEach((item) => {
+  const toggle = item.querySelector(".audience-toggle");
+  const action = toggle?.querySelector("small");
+
+  toggle?.addEventListener("click", () => {
+    const shouldOpen = !item.classList.contains("is-open");
+    audienceItems.forEach((otherItem) => {
+      const otherToggle = otherItem.querySelector(".audience-toggle");
+      const otherAction = otherToggle?.querySelector("small");
+      otherItem.classList.remove("is-open");
+      otherToggle?.setAttribute("aria-expanded", "false");
+      if (otherAction) otherAction.textContent = "Подробнее ↓";
+    });
+    if (shouldOpen) {
+      item.classList.add("is-open");
+      toggle?.setAttribute("aria-expanded", "true");
+      if (action) action.textContent = "Свернуть ↑";
+    }
+  });
+});
