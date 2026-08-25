@@ -52,52 +52,39 @@
 
     <section class="section levels-section" id="levels">
       <div class="container">
-        <header class="section-heading">
+        <header class="section-heading section-heading--levels">
           <p class="eyebrow">Четыре уровня работы</p>
-          <h2>4 уровня работы<br>специалиста</h2>
-        </header>
-        <div class="level-top-grid">
-          <article class="level-card is-open" data-level-card="0">
-            <button class="level-card__toggle" type="button" aria-expanded="true" aria-controls="level-detail-1"><span class="level-number">01</span><span class="level-card__heading"><strong>Ситуации</strong><small>Конкретная проблема здесь и сейчас</small></span><span class="level-card__action">Свернуть ↑</span></button>
-            <div class="level-card__detail" id="level-detail-1"><div><p>Специалист помогает клиенту разобраться с одной конкретной задачей: конфликтом, сложным выбором или кризисной ситуацией.</p><hr><p>Клиент получает решение текущей проблемы. Но если её источник не изменился, похожие ситуации могут возникнуть снова.</p></div></div>
-          </article>
-          <article class="level-card" data-level-card="1">
-            <button class="level-card__toggle" type="button" aria-expanded="false" aria-controls="level-detail-2"><span class="level-number">02</span><span class="level-card__heading"><strong>Стратегии</strong><small>План, действия и дисциплина</small></span><span class="level-card__action">Читать дальше ↓</span></button>
-            <div class="level-card__detail" id="level-detail-2"><div><p>Специалист помогает определить цель, составить понятный план и поддерживает клиента в последовательных действиях.</p><hr><p>Клиент понимает, что делать дальше. Но хороший план может не сработать, если внутреннее сопротивление находится глубже уровня действий.</p></div></div>
-          </article>
-          <article class="level-card" data-level-card="2">
-            <button class="level-card__toggle" type="button" aria-expanded="false" aria-controls="level-detail-3"><span class="level-number">03</span><span class="level-card__heading"><strong>Идентичность</strong><small>Убеждения, роли и взгляд на себя</small></span><span class="level-card__action">Читать дальше ↓</span></button>
-            <div class="level-card__detail" id="level-detail-3"><div><p>Работа помогает клиенту увидеть привычные убеждения, попробовать новую роль и расширить представление о собственных возможностях.</p><hr><p>Клиент получает важные осознания. Но понимание само по себе ещё не всегда превращается в устойчивый способ жить и действовать.</p></div></div>
-          </article>
-        </div>
-
-        <div class="level-map-layout">
-          <div class="level-map" data-active-level="0" aria-label="Схема глубины четырёх уровней работы">
-            <div class="level-map__rings" aria-hidden="true"><span class="map-ring map-ring--1"></span><span class="map-ring map-ring--2"></span><span class="map-ring map-ring--3"></span><span class="map-ring map-ring--4"></span></div>
-            <div class="depth-label" aria-hidden="true"><span>Глубина работы</span><i></i></div>
-            <button class="map-node map-node--1 is-active" type="button" data-level-node="0" aria-pressed="true"><span>01</span><strong>Ситуации</strong><small>Решение задач</small></button>
-            <button class="map-node map-node--2" type="button" data-level-node="1" aria-pressed="false"><span>02</span><strong>Стратегии</strong><small>Планы и действия</small></button>
-            <button class="map-node map-node--3" type="button" data-level-node="2" aria-pressed="false"><span>03</span><strong>Идентичность</strong><small>Новые роли</small></button>
-            <button class="map-node map-node--4" type="button" data-level-node="3" aria-pressed="false"><span>04</span><strong>Бытие</strong><small>Онтология</small></button>
-            <div class="map-person map-person--outer" aria-hidden="true"><i></i><b></b></div>
-            <div class="map-person map-person--middle" aria-hidden="true"><i></i><b></b></div>
-            <div class="map-person map-person--inner" aria-hidden="true"><i></i><b></b></div>
+          <h2>От уровня работы зависит результат</h2>
+          <div class="levels-intro">
+            <p>В помогающей практике изменения создаются на разных уровнях. Каждый из них решает свои задачи — и приводит к своим результатам.</p>
+            <p>Зная уровень, на котором сегодня строится ваша практика, вы яснее видите её сильные стороны, ограничения и следующий профессиональный шаг.</p>
           </div>
-          <article class="level-card level-card--being" data-level-card="3">
-            <button class="level-card__toggle" type="button" aria-expanded="false" aria-controls="level-detail-4"><span class="level-number">04</span><span class="level-card__heading"><strong>Бытие</strong><small>Источник решений и устойчивых изменений</small></span><span class="level-card__action">Читать дальше ↓</span></button>
-            <div class="level-card__detail" id="level-detail-4"><div><p>Специалист работает с внутренней основой, из которой у клиента рождаются мысли, выборы, роли и стратегии.</p><hr><p>Когда меняется сам источник решений, новые действия становятся естественными, а изменения сохраняются без постоянной внешней поддержки.</p></div></div>
-          </article>
+        </header>
+        <div class="level-overview">
+          <div class="level-orbit" aria-label="Четыре уровня работы: идентичность, ситуации, бытие и стратегии">
+            <div class="level-orbit__rings" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span class="level-name level-name--identity">Идентичность</span>
+            <span class="level-name level-name--situation">Ситуации</span>
+            <span class="level-name level-name--being">Бытие</span>
+            <span class="level-name level-name--strategy">Стратегии</span>
+            <div class="level-orbit__core"><small>В основе</small><strong>вашей практики</strong></div>
+          </div>
+          <aside class="level-meaning">
+            <p class="eyebrow">Зачем знать свой уровень</p>
+            <h3>Один и тот же метод может давать разную глубину изменений.</h3>
+            <p>Результат зависит не только от инструмента, но и от уровня, с которого специалист видит запрос и строит работу с клиентом.</p>
+            <p>Диагностика показывает не «лучше» или «хуже», а то, что уже определяет вашу практику сегодня.</p>
+          </aside>
         </div>
-        <div class="section-cta"><div><strong>5 вопросов · 2 минуты</strong><p>Узнайте, на каком из четырёх уровней строится ваша практика.</p></div><a class="button button--compact" data-telegram href="https://t.me/testaletheia_academy_bot?start=diag"><span>Определить свой уровень</span><span class="button__arrow" aria-hidden="true">↗</span></a></div>
+        <div class="section-cta"><div><strong>5 вопросов · 2 минуты</strong><p>Узнайте, какой уровень лежит в основе вашей практики и какие результаты закономерно возникают на нём.</p></div><a class="button button--compact" data-telegram href="https://t.me/testaletheia_academy_bot?start=diag"><span>Определить свой уровень</span><span class="button__arrow" aria-hidden="true">↗</span></a></div>
       </div>
     </section>
-
     <section class="section benefits-section">
       <div class="container">
         <header class="benefits-heading">
-          <p class="eyebrow">Преимущества онтологического уровня · Работа на 4 уровне</p>
-          <h2>Как обычно меняется практика, когда специалист начинает работать глубже</h2>
-          <p>По мере перехода на более глубокий уровень работы меняются не только методики, но и весь фундамент вашей практики, и как следствие — результаты клиентов и изменение вашей собственной реализации.</p>
+          <p class="eyebrow">Когда работа становится глубже</p>
+          <h2>Что меняется, когда специалист работает глубже</h2>
+          <p>Чем глубже строится работа, тем устойчивее становятся изменения клиента — и тем заметнее меняется сама практика специалиста.</p>
         </header>
         <div class="benefit-list">
           <article class="benefit-item"><span class="benefit-number">01</span><button class="benefit-toggle" type="button" aria-expanded="false" aria-controls="benefit-detail-1"><strong>Появляются устойчивые результаты.</strong><small>Подробнее ↓</small></button><div class="benefit-detail" id="benefit-detail-1"><div><p>Клиент меняет сам источник своих решений. Ему становятся доступны результаты, которые не удавалось получить, сколько бы он ни менял стратегии и действия.</p></div></div></article>
