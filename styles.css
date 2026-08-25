@@ -1468,3 +1468,6 @@ h2 {
 .level-stack-card:nth-child(4) { transform:translateX(6.5%); }
 @media(max-width:900px){.level-reference-layout--stack{grid-template-columns:1fr}.level-stack{width:min(100%,560px);margin-inline:auto}.level-reference-copy{order:-1}}
 @media(max-width:520px){.level-stack{gap:12px;width:100%}.level-stack-card{min-height:112px;padding:20px 22px;border-radius:19px}.level-stack-card:nth-child(n){transform:none}.level-stack-card small{font-size:.9rem}.level-stack-card strong{font-size:1.3rem}}
+/* Levels copy after removing the visual stack */
+.level-reference-layout--stack { display:block; }
+.level-reference-layout--stack .level-reference-copy { width:min(900px,100%); margin-inline:auto; }
